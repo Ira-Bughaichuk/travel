@@ -5,7 +5,7 @@ export default function Hero() {
   return (
     <section className=' h-full bg-Hero bg-cover bg-center'>
       <Header/>
-      <div className=" flex gap-y-6 flex-col tablet:flex-row tablet:justify-between font-Inter text-primary pb-[58px] px-[20px] tablet:pt-[41px] tablet:pb-[64px] tablet:px-[32px]  desktop:pt-[48px] desktop:pb-[104px] desktop:px-[104px]">
+      <div className=" flex gap-y-6 flex-col tablet:flex-row tablet:justify-between font-Inter text-primary pb-[58px] px-5 tablet:pt-[41px] tablet:pb-[64px] tablet:px-[32px]  desktop:pt-[48px] desktop:pb-[104px] desktop:px-[104px]">
         
         {/* Mobile */}
            <div className="flex flex-col items-end tablet:hidden">

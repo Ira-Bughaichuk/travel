@@ -5,9 +5,50 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer utilities {
+.mainTitle{
+  @apply text-primary text-l not-italic font-thin leading-[56px] tracking-[-1.6px] uppercase 
+  tablet:leading-[1] tablet:text-xl tablet:tracking-[-2.68px]
+  desktop:text-xxl desktop:tracking-[-3.92px] 
+}
+.text{
+  @apply text-primary not-italic text-sm font-extralight leading-[20px]
+  tablet:text-s tablet:leading-[20px]
+  desktop:text-base desktop:leading-[24px]
+}
+ .swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  width: 100%;
+  height: 100%;
+
+  background-position: center;
+  background-size: cover;
+
+ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} 
+.swiper-pagination .swiper-pagination-fraction .swiper-pagination-horizontal{
+  color:green;
+}
+.swiper-pagination-current{
+  color: #fff;
+}
+.swiper-pagination-total{
+  color:red;
+}
+/* .servicesImage{
+  @apply w-[280px] h-[213px]
+  tablet:w-[463px] tablet:h-[370px]
+  desktop:w-[607px] desktop:h-[429px]
+} */
+/* @layer utilities {
   .line-height-normal {
-    line-height: normal;
+    line-height: normal; leading-[1]
   }
   .title {
     color: #fff;
@@ -27,4 +68,5 @@
     font-weight: 200;
     line-height: 20px;
   }
-}
+} */
+

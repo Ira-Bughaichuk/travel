@@ -9,10 +9,12 @@ const config: Config = {
   theme: {
     screens: {
       'mobile': '320px',
-      // 'mbm':'480px',
+       'xs':'480px',
       'tablet': '768px',
       'maxMobile': {'max': '767px'},
-      // => @media (max-width: 1279px) { ... }
+      // => @media (max-width: 767px) { ... }
+      'laptop': {'min': '768px', 'max': '1440px'},
+      // => @media (min-width: 768px and max-width: 1440px) { ... }
       'desktop': '1440px',
       // => @media (min-width: 1280px) { ... }
     },
@@ -22,8 +24,12 @@ const config: Config = {
       sm: '14px',
       s: '16px',
       base: '18px',
+      slS: "20px",
+      slM:"22px",
+      slL:"28px",
       m:'32px',
       l:'40px',
+      L:'43px',
       xl:'67px',
       xxl:'98px',
     },
@@ -41,7 +47,8 @@ const config: Config = {
       backgroundImage: {
         Hero: "url('/assets/images/hero.jpg')",
         About: "url('/assets/images/about-desc.jpg')",
-        // 'services': "url('/public/assets/images/')",
+        Services: "url('/assets/images/services-desc01.jpg')",
+        Services02: "url('/assets/images/services-desc02.jpg')",
         Career: "url('/assets/images/career-desc.jpg')",
         Gallery: "url('/assets/images/gallery-desc.jpg')",
         Contacts: "url('/assets/images/contacts-desc.jpg')",
