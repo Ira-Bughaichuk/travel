@@ -26,8 +26,11 @@ const config: Config = {
       base: '18px',
       slS: "20px",
       slM:"22px",
+      medium:"24px",
       slL:"28px",
+      SM:'30px',
       m:'32px',
+      ML:"36px",
       l:'40px',
       L:'43px',
       xl:'67px',
@@ -43,6 +46,9 @@ const config: Config = {
         secondary: 'rgba(255, 255, 255, 0.20)',
         bgNav: 'rgba(1, 10, 5, 0.75)',
         bgBtn: 'rgba(255, 255, 255, 0.10)',
+        bgInput:'rgba(255, 255, 255, 0.05)',
+        bgCheck: 'rgba(2, 15, 8, 0.75)',
+        errorColor: '#FF5757'
       },
       backgroundImage: {
         Hero: "url('/assets/images/hero.jpg')",

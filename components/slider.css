@@ -1,0 +1,107 @@
+/*
+ .swiper-slide {
+  width: 100%;
+  height: 100%;
+
+  background-position: center;
+  background-size: cover;
+
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+  .slideText{
+    @apply uppercase not-italic font-extralight text-slS leading-[17px] tablet:text-slM tablet:leading-[18px] desktop:text-slL desktop:leading-6
+  }
+   /* .swiper-slide img {
+    @apply block object-contain w-full h-auto
+  }
+  .swiper-slide{
+    @apply max-w-[280px] h-[200px] block 
+    tablet:max-w-[450px] tablet:h-[380px]
+    desktop:max-w-[620] desktop:h-[460px]
+  } */
+  
+  /* .swiper-slide{
+    @apply w-full h-[200px]  maxMobile:w-[280px] 
+    tablet:h-[380px] desktop:h-[460px]
+  }  */
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .image-slider{
+    max-width:280px;
+    height:200px;
+    display: block;
+    margin: 0 auto;
+   @media screen and (min-width:768px){
+        max-width: 450px;
+        height: 380px;
+   }
+   @media screen and (min-width:1280px) {
+       max-width: 620px;
+       height: 460px;
+   }
+  }
+
+  .swiper-slide-gallery {
+    width: 420px;
+    height: 850px;
+    @media screen and (min-width: 768px) {
+        width: 768px;
+        height: 621px;
+    }
+    @media screen and (min-width: 1280px) {
+        width: auto;
+        height: 780px;
+    }
+}
+  /* .swiper-pagination{
+  @apply absolute left-10 top-10
+} */
+/* .swiper-pagination{
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    display: block;
+    
+  }
+  .swiper-pagination-fraction {
+    @apply text-primary text-L not-italic font-thin leading-[1] text-L tablet:text-xl tablet:leading-[78px] desktop:leading-[1] desktop:text-xxl
+  }
+  .swiper-pagination-current{
+    @apply text-primary text-right  text-L not-italic font-thin leading-[1] text-L tablet:text-xl tablet:leading-[78px] desktop:leading-[1] desktop:text-xxl
+  } 
+  .swiper-pagination-total{
+    @apply text-secondary text-right  text-L not-italic font-thin leading-[1] text-L tablet:text-xl tablet:leading-[78px] desktop:leading-[1] desktop:text-xxl
+  } */
+   /* .swiper-pagination-horizontal{
+  color: #FFF;
+  font-family: Inter;
+  font-size: 98px;
+  font-style: normal;
+  font-weight: 100;
+  line-height: normal;
+} */
+/*
+.swiper-pagination-total{
+  color: rgba(255, 255, 255, 0.20);
+font-family: Inter;
+font-size: 98px;
+font-style: normal;
+font-weight: 100;
+line-height: normal;
+} */
+/* .servicesImage{
+  @apply w-[280px] h-[213px]
+  tablet:w-[463px] tablet:h-[370px]
+  desktop:w-[607px] desktop:h-[429px]
+} */
