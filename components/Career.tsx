@@ -1,6 +1,8 @@
 import React from "react";
 import CareerForm from "./CareerForm";
 
+
+
 export default function Career() {
   return (
     <>
@@ -76,7 +78,7 @@ export default function Career() {
               <div className="w-full hidden tablet:flex tablet:flex-col tablet:gap-y-8 desktop:gap-y-[14px]">
                 <div className="w-full">
                   <p className="tablet:w-[221px] desktop:w-[234px] not-italic font-extralight leading-5 text-sm tablet:text-[13px] desktop:text-base desktop:leading-6">
-                    Don't miss your opportunity!
+                    Don`t miss your opportunity!
                     <br /> Fill out the form right now and join our team!
                   </p>
                 </div>
@@ -92,7 +94,7 @@ export default function Career() {
       <div className="block tablet:hidden bg-Career bg-cover bg-no-repeat bg-center pt-[56px] pb-[53px] px-[20px]">
         <div className="flex justify-end">
           <p className="text-primary mb-[42px] w-[179px] not-italic font-extralight leading-5 text-sm tablet:text-[13px] desktop:text-base desktop:leading-6">
-            Don't miss your <br /> opportunity! Fill out the form right now and
+            Don`t miss your <br /> opportunity! Fill out the form right now and
             join our team!
           </p>
         </div>
