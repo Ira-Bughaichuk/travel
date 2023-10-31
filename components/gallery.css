@@ -19,7 +19,7 @@
 }
 .swiper-button-next {
     right: 69px;
-    @media screen and (min-width:1280px) {right: 170px;}
+    @media screen and (min-width:1280px) {right: 155px;}
 }
 
 .swiper {
