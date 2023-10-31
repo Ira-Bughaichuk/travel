@@ -1,11 +1,6 @@
 import './globals.css';
 
 import type { Metadata } from 'next';
-// import { Inter } from 'next/font/google';
-// import {Karantina} from 'next/font/google';
-
-// const inter = Inter({ subsets: ['latin'], weight:['100', '200', '300', '400', '500', '700'] });
-// const karantina = Karantina({ subsets: ['latin'], weight:['400'] });
 
 export const metadata: Metadata = {
   title: 'CarpTravel',
@@ -19,7 +14,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      {/* <body className={inter.className}>{children}</body> */}
+      <head>
+        <link href="/favicon.ico" rel="icon" type="image/x-icon" />
+      </head>
       <body className="font-Inter">{children}</body>
     </html>
   )

@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import { useForm } from "react-hook-form";
+import { useForm, SubmitHandler} from "react-hook-form";
 import Close from '../public/assets/icons/close.svg';
 
 type ConfigFormCareer = {
@@ -30,34 +30,32 @@ export default function CareerForm() {
         reset,
       } = useForm<ConfigFormCareer>({mode:'onBlur'});
 
-      //const onSubmit: SubmitHandler<ConfigFormCareer> = ((data) =>{ 
-    const onSubmit = handleSubmit((data) =>{
-        console.log(data);
+     
+    //const onSubmit = handleSubmit((data) =>{
+      const  onSubmit: SubmitHandler<ConfigFormCareer> = (data) =>{
         alert(
-        `Email:${data.email},
-        Full Name:${data.fullName},
-        Message:${data.message},
-        Phone:${data.phone},
-      ${
-        data.isAgree
-          ? "Consent to the processing of personal data."
-          : "Not consenting to the processing of personal data."
-      }`)
+        `Full Name:${data.fullName},
+         Email:${data.email},
+         Phone:${data.phone},
+         Message:${data.message || ""},
+            ${
+                data.isAgree
+                ? "Consent to the processing of personal data."
+                : "Not consenting to the processing of personal data."
+            }`)
       reset()
-      console.log(data);
-      
-    });
+    };
 
   return (
     <>
-    <form action="#" onSubmit={onSubmit}>
-       <div className="flex flex-col gap-y-4 tablet:flex-row tablet:gap-x-5 desktop:gap-x-6 "> 
+    <form action="#" onSubmit={handleSubmit(onSubmit)} className="w-full">
+       <div className="text-primary flex flex-col gap-y-4 tablet:flex-row tablet:gap-x-5 desktop:gap-x-6 "> 
             <div className="flex flex-col gap-y-4 desktop:gap-y-[26px]">
-                <div>
-                    <label className="label" htmlFor="name">Full name</label>
-                    <input className="input" id="name" type="text" placeholder="John Smith"
+                <div className="flex flex-col">
+                    <label className="label">Full name</label>
+                    <input className="input" placeholder="John Smith"
                     {...register("fullName", {
-                        required: "This is required",
+                        required: "Incorrect name",
                         minLength: { value: 7, message: "Min length is 7" },
                         pattern: {
                           value: /^[A-Za-z]+$/i,
@@ -65,12 +63,11 @@ export default function CareerForm() {
                         },
                       })} />
                     <div className="flex justify-end">
-                        {errors.fullName?.message && (
-                            <Image src={Close} alt="Close" width={18} height={18} />)}
-                        <p className="text-errorColor text-xs leading-6 tracking-[2.4px] ml-1">
-                            {errors.fullName?.message}
-                        </p>
-                    </div>
+                        {errors?.fullName && (
+                          <><Image src={Close} alt="Close" width={18} height={18} />
+                            <p className="text-errorColor text-xs leading-6 tracking-[2.4px] ml-1">{errors?.fullName?.message}</p>
+                          </>)}
+                      </div>
                 </div>
                 <div>
                     <label className="label" htmlFor="email">E-mail</label>
@@ -84,38 +81,34 @@ export default function CareerForm() {
                         },
                       })}/>
                     <div className="flex justify-end">
-                            {errors.email?.message && (
-                            <Image src={Close} alt="Close" width={18} height={18} />)}
-                        <p className="text-errorColor text-xs leading-6 tracking-[2.4px] ml-1">
-                            {errors.fullName?.message}
-                        </p>
-                    </div>
+                        {errors?.email && (
+                          <><Image src={Close} alt="Close" width={18} height={18} />
+                            <p className="text-errorColor text-xs leading-6 tracking-[2.4px] ml-1">{errors?.email?.message}</p>
+                          </>)}
+                      </div>
                 </div>
                 <div>
                     <label className="label" htmlFor="position"> Position </label>
-                    <input className="input" id="position" type="text" placeholder="Movie maker"
-                    {...register("position")}/>
+                    <input className="input" id="position" type="text" placeholder="Movie maker" {...register("position")}/>
                 </div>
                 <div>
                     <label className="label" htmlFor="phone">Phone</label>
                     <input className="input" id="phone" type="tell" placeholder="+ 38 (097) 12 34 567"
                     {...register("phone", {
-                        required: "This is required",
+                        required: "Incorrect phone",
                         pattern: { value: /^\+380\d{9}$/, message: "Invalid phone" },
                       })}/>
+                      <div className="flex justify-end">
+                            {errors?.phone && (
+                           <><Image src={Close} alt="Close" width={18} height={18} />
+                             <p className="text-errorColor text-xs leading-6 tracking-[2.4px] ml-1">{errors?.phone?.message}</p>
+                           </>)}
+                     </div>
                 </div>
 
                 <div className="block mb:[18px] tablet:hidden">
                     <label className="label" htmlFor="message"> Message </label>
-                    <textarea className="textarea resize-none " rows={8} id="message"
-                    {...register("message", { required: "This is required" })}/>
-                    <div className=" flex">
-                            {errors.message?.message && (
-                            <Image src={Close} alt="Close" width={18} height={18} />)}
-                        <p className="text-errorColor text-xs leading-6 tracking-[2.4px] ml-1">
-                            {errors.fullName?.message}
-                        </p>
-                    </div>
+                    <textarea className="textarea resize-none h-[196px] " id="message"/>
                 </div>
                 <div className="hidden tablet:flex tablet:flex-row tablet:gap-x-2">
                     <div className="checkbox-wrapper">
@@ -133,18 +126,10 @@ export default function CareerForm() {
             </div>
      
 
-        <div>
-                <div className="hidden tablet:block">
+        <div className="w-full">
+                <div className="hidden tablet:flex tablet:flex-col w-full">
                     <label className="label" htmlFor="message"> Message </label>
-                    <textarea className="textarea resize-none " rows={8} id="message" 
-                    {...register("message", { required: "This is required" })}/>
-                    <div className="flex justify-end">
-                            {errors.message?.message && (
-                            <Image src={Close} alt="Close" width={18} height={18} />)}
-                        <p className="text-errorColor text-xs leading-6 tracking-[2.4px] ml-1">
-                            {errors.fullName?.message}
-                        </p>
-                    </div>
+                    <textarea className="w-full textarea resize-none tablet:h-[228px] desktop:h-[268px]"  id="message" />   
                 </div>
 
                 <div className="flex flex-row gap-x-2 mb:4 tablet:hidden">
@@ -172,3 +157,12 @@ export default function CareerForm() {
     </>
   );
 }
+
+
+// {...register("message", { required: "This is required" })}/>
+//                     <div className="flex justify-end">
+//                         {errors?.message && (
+//                           <><Image src={Close} alt="Close" width={18} height={18} />
+//                             <p className="text-errorColor text-xs leading-6 tracking-[2.4px] ml-1">{errors?.message?.message}</p>
+//                           </>)}
+//                     </div>

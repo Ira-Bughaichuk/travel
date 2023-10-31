@@ -3,7 +3,7 @@ import React from "react";
 
 export default function About() {
   return (
-    <section id="about" className="bg-About bg-cover bg-left desktop:bg-center">
+    <section id="about" className="bg-About bg-cover bg-no-repeat bg-left desktop:bg-center">
       <div className="text-primary pt-[56px] pb-[53px] px-[20px] tablet:pt-[73px] tablet:pb-[64px] tablet:px-[32px]  desktop:pt-[106px] desktop:pb-[104px] desktop:px-[104px]">
           <div className="flex flex-col laptop:justify-between tablet:flex-row tablet:gap-x-[76px] desktop:gap-x-6">
             

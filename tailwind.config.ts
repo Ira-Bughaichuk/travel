@@ -13,9 +13,9 @@ const config: Config = {
       'tablet': '768px',
       'maxMobile': {'max': '767px'},
       // => @media (max-width: 767px) { ... }
-      'laptop': {'min': '768px', 'max': '1440px'},
-      // => @media (min-width: 768px and max-width: 1440px) { ... }
-      'desktop': '1440px',
+      'laptop': {'min': '768px', 'max': '1279px'},
+      // => @media (min-width: 768px and max-width: 1280px) { ... }
+      'desktop': '1280px',
       // => @media (min-width: 1280px) { ... }
     },
     fontSize: {

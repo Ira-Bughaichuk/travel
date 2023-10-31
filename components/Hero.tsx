@@ -1,9 +1,10 @@
-import React from 'react'
+"use client";
 import Header  from '@/components/Header';
+import { Link }  from 'react-scroll';
 
 export default function Hero() {
   return (
-    <section className=' h-full bg-Hero bg-cover bg-center'>
+    <section className='h-full bg-Hero bg-cover bg-center'>
       <Header/>
       <div className=" flex gap-y-6 flex-col tablet:flex-row tablet:justify-between font-Inter text-primary pb-[58px] px-5 tablet:pt-[41px] tablet:pb-[64px] tablet:px-[32px]  desktop:pt-[48px] desktop:pb-[104px] desktop:px-[104px]">
         
@@ -29,8 +30,9 @@ export default function Hero() {
             
             <div>
               <p className="w-[280px] tablet:w-[230px] desktop:w-[294px] mb-[24px] tablet:mb-[28px] text-sm not-italic font-extralight leading-5 tablet:text-s desktop:text-base desktop:leading-6">We offer you unforgettable trips to the most beautiful parts of the Carpathians. Enjoy stunning views, exciting expeditions, and the best service!</p>
-              <button className="w-full border border-dashed  border-primary cursor-pointer bg-bgBtn py-[10px]  hover:bg-secondary duration-500 text-base not-italic font-bold leading-[48px] tablet:leading-normal tablet:py-[14px] desktop:text-m desktop:py-[16px] uppercase">JOIN NOW</button>
+               <Link to="contacts" spy={true} smooth={true} offset={100}  duration={500} className="block text-center w-full border border-dashed  border-primary cursor-pointer bg-bgBtn py-[10px]  hover:bg-secondary duration-500 text-base not-italic font-bold leading-[48px] tablet:leading-normal tablet:py-[14px] desktop:text-m desktop:py-[16px] uppercase">JOIN NOW</Link> 
             </div>
+            
         
         </div>
       </div>

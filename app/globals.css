@@ -15,25 +15,26 @@
   tablet:text-s tablet:leading-[20px]
   desktop:text-base desktop:leading-[24px]
 }
+
 .label{
-  @apply text-primary text-xs not-italic font-extralight leading-6 tracking-[2.4px]
-  mb-1 desktop:mb-[6px]
+  @apply text-xs not-italic font-extralight leading-6 tracking-[2.4px]
+  mb-1 desktop:mb-[6px] 
 }
 .input{
-  @apply text-primary text-slS not-italic font-extralight leading-6 outline-none border-none
+  @apply placeholder:text-[13px]  placeholder:not-italic  placeholder:font-extralight  placeholder:leading-6 outline-none border-none desktop:placeholder:text-slS
   placeholder:text-secondary 
-  block pl-2 bg-bgInput opacity-20
+  block pl-2 bg-bgInput 
   w-full h-6 desktop:h-7 
 }
-/*  tablet:w-[222px] desktop:w-[290px] */
+
 
 .textarea{
-  @apply text-primary text-slS not-italic font-extralight leading-6 outline-none border-none
+  @apply  placeholder:text-[13px] placeholder:not-italic placeholder:font-extralight placeholder:leading-6 outline-none border-none desktop:placeholder:text-slS
   placeholder:text-secondary 
-  block pl-2 bg-bgInput opacity-20 tablet:mb-[9px] desktop:mb-6
-  w-full tablet:h-[228px] desktop:h-[268px] 
+  block pl-2 bg-bgInput  tablet:mb-[9px] desktop:mb-6
+  w-full
 }
-/*  tablet:w-[221px] desktop:w-[292px] h-[196px] */
+
 
 .checkbox-wrapper input[type="checkbox"] {
   -webkit-appearance: none;
@@ -57,24 +58,6 @@ input.checked::before {
   top: -17px;
 }
 
-
-
-/* .join-button{
-      height: 50px;
-      background-image: url('/mobile2.svg'), url('/mobile1.svg');
-      background-size: 15% 100%, 15% 100%;
-      background-repeat: no-repeat, no-repeat;
-      background-position: left, right;
-      color: white;
-      font-size: 16px;
-      @media screen and (min-width:768px){
-        background-image: url('/tablet1.svg'), url('/tablet2.svg');
-        background-size: 17% 100%, 17% 100%;
-      }
-      @media screen and (min-width:1280px) {
-        background-size: 14% 100px, 14% 100%;
-            }
-} */
 
 
 
