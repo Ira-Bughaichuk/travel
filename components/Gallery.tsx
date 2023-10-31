@@ -12,32 +12,32 @@ import "./gallery.css";
 const gallery = [
   {
     image: "/assets/images/gallery-slide1.jpg",
-    alt: "mountain",
+    alt: "slide1",
     id: "1",
   },
   {
     image: "/assets/images/gallery-slide2.jpg",
-    alt: "lake",
+    alt: "slide2",
     id: "2",
   },
   {
     image: "/assets/images/gallery-slide3.jpg",
-    alt: "trees",
+    alt: "slide3",
     id: "3",
   },
   {
     image: "/assets/images/gallery-slide1.jpg",
-    alt: "mountain",
+    alt: "slide4",
     id: "4",
   },
   {
     image: "/assets/images/gallery-slide2.jpg",
-    alt: "lake",
+    alt: "slide5",
     id: "5",
   },
   {
     image: "/assets/images/gallery-slide3.jpg",
-    alt: "trees",
+    alt: "slide6",
     id: "6",
   },
 ];
@@ -90,10 +90,13 @@ const carouselSettings = {
 
 export default function Gallery() {
   return (
-    <section id="gallery"
+    <section
+      id="gallery"
       className="w-full bg-Gallery bg-no-repeat bg-cover bg-center text-primary pt-[56px] pb-[53px] px-[20px] tablet:pt-[73px] tablet:pb-[64px] tablet:px-[32px]  desktop:pt-[106px] desktop:pb-[104px] desktop:px-[104px]"
     >
-      <h2 className="mainTitle mb-6 tablet:mb-[65px] tablet:text-center desktop:text-left desktop:mb-[15px]">Our<span className="font-medium"> gallery</span></h2>
+      <h2 className="mainTitle mb-6 tablet:mb-[65px] tablet:text-center desktop:text-left desktop:mb-[15px]">
+        Our<span className="font-medium"> gallery</span>
+      </h2>
       <div>
         <ul className="flex flex-col justify-center items-center tablet:hidden">
           {gallery.slice(3).map((img) => (
@@ -145,6 +148,4 @@ export default function Gallery() {
       </div>
     </section>
   );
-};
-
-
+}

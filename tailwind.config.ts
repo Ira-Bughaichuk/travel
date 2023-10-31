@@ -12,11 +12,8 @@ const config: Config = {
        'xs':'480px',
       'tablet': '768px',
       'maxMobile': {'max': '767px'},
-      // => @media (max-width: 767px) { ... }
       'laptop': {'min': '768px', 'max': '1279px'},
-      // => @media (min-width: 768px and max-width: 1280px) { ... }
       'desktop': '1280px',
-      // => @media (min-width: 1280px) { ... }
     },
     fontSize: {
       xxs: '10px',
