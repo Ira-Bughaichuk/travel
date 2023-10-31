@@ -1,5 +1,5 @@
 import React from "react";
-import CareerForm from "@/components/CareerForm";
+import CareerForm from "./CareerForm";
 
 export default function Career() {
   return (
