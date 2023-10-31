@@ -70,7 +70,7 @@ export default function Slider() {
         ref={swiperRef}
         pagination={{ type: "fraction" }}
         effect={"fade"}
-        grabCursor={"true"}
+        grabCursor={true}
         navigation={true}
         slidesPerView={1}
         modules={[EffectFade]}
