@@ -19,7 +19,7 @@
 }
 .swiper-button-next {
     right: 69px;
-    @media screen and (min-width:1280px) {right: 155px;}
+    @media screen and (min-width:1280px) {right: 220px;}
 }
 
 .swiper {
@@ -40,3 +40,7 @@
     display: block;
     width: 100%;
 }
+
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0;
+} 
