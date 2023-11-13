@@ -3,7 +3,7 @@ import React from "react";
 export default function About() {
   return (
     <section
-      id="about"
+      id="/about"
       className="bg-About bg-cover bg-no-repeat bg-left desktop:bg-center"
     >
       <div className="text-primary pt-[56px] pb-[53px] px-[20px] tablet:pt-[73px] tablet:pb-[64px] tablet:px-[32px]  desktop:pt-[106px] desktop:pb-[104px] desktop:px-[104px]">
@@ -13,11 +13,11 @@ export default function About() {
               WHO <span className="font-medium">WE ARE</span>
             </h2>
             <div className="hidden desktop:hidden laptop:block w-[180px] tablet:w-[221px] desktop:w-[297px]">
-              <p className="text-sm not-italic uppercase font-normal tablet:text-s desktop:text-base desktop:leading-6">
+              <p className="text-sm not-italic uppercase font-normal tablet:text-base desktop:text-lg desktop:leading-6">
                 <span>From vacationers</span>
                 <span className="block text-right">to active travelers</span>
               </p>
-              <p className="text-sm not-italic font-extralight leading-5 tracking-[-0.14px] tablet:text-s tablet:tracking-[0.32px] desktop:tracking-[2.16px] desktop:text-base desktop:leading-6">
+              <p className="text-sm not-italic font-extralight leading-5 tracking-[-0.14px] tablet:text-base tablet:tracking-[0.32px] desktop:tracking-[2.16px] desktop:text-lg desktop:leading-6">
                 we have a tour for everyone.
               </p>
             </div>
@@ -44,11 +44,11 @@ export default function About() {
         <div className="flex laptop:justify-end flex-col mt-10 gap-y-10 tablet:flex-row desktop:mt-[172px] desktop:flex-row-reverse desktop:justify-between desktop:align-center">
           <div className="flex justify-end">
             <div className="laptop:hidden w-[180px] tablet:w-[221px] desktop:w-[297px]">
-              <p className="text-sm not-italic uppercase font-normal tablet:text-s desktop:text-base desktop:leading-6">
+              <p className="text-sm not-italic uppercase font-normal tablet:text-base desktop:text-lg desktop:leading-6">
                 <span>From vacationers</span>
                 <span className="block text-right">to active travelers</span>
               </p>
-              <p className="text-sm not-italic font-extralight leading-5 tracking-[-0.14px] tablet:text-s tablet:tracking-[0.32px] desktop:tracking-[2.16px] desktop:text-base desktop:leading-6">
+              <p className="text-sm not-italic font-extralight leading-5 tracking-[-0.14px] tablet:text-base tablet:tracking-[0.32px] desktop:tracking-[2.16px] desktop:text-lg desktop:leading-6">
                 we have a tour for everyone.
               </p>
             </div>

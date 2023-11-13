@@ -30,12 +30,11 @@ export default function Contacts() {
   };
   return (
     <section
-      id="contacts"
+      id="/contacts"
       className="bg-Contacts bg-cover bg-no-repeat bg-center"
     >
       <div className="text-primary pt-[56px] pb-[53px] px-[20px] tablet:pt-[73px] tablet:pb-[64px] tablet:px-[32px]  desktop:pt-[106px] desktop:pb-[104px] desktop:px-[104px]">
         <h2 className="mainTitle mb-9 tablet:mb-10 desktop:mb-[71px]">
-          {" "}
           Contact <span className="font-medium">US</span>
         </h2>
         <div className="flex flex-col gap-y-3 tablet:gap-y-[64px] desktop:flex-row desktop:gap-x-[231px]">
@@ -43,10 +42,10 @@ export default function Contacts() {
             <div className="flex flex-col  desktop:pl-[107px]">
               <div className="flex flex-row items-top gap-x-5 mb-6 maxMobile:justify-end desktop:justify-end desktop:mb-[64px]">
                 <ul className="laptop:w-[221px] laptop:text-right">
-                  <li className="text-sm not-italic font-normal leading-6 tablet:text-s desktop:text-base">
+                  <li className="active-link text-sm not-italic font-normal leading-6 tablet:text-base desktop:text-lg">
                     <a href="tel:+380981234567">+38 (098) 12 34 567</a>
                   </li>
-                  <li className="text-sm not-italic font-normal leading-6 tablet:text-s desktop:text-base">
+                  <li className="active-link text-sm not-italic font-normal leading-6 tablet:text-base desktop:text-lg">
                     <a href="tel:+380731234567">+38 (073) 12 34 567</a>
                   </li>
                 </ul>
@@ -57,7 +56,7 @@ export default function Contacts() {
 
               <div className="flex flex-row items-center gap-x-5 maxMobile:mb-6 maxMobile:justify-center desktop:justify-end">
                 <a
-                  className="laptop:w-[221px] laptop:text-right text-sm not-italic font-normal leading-6 tablet:text-s desktop:text-base"
+                  className="active-link laptop:w-[221px] laptop:text-right text-sm not-italic font-normal leading-6 tablet:text-base desktop:text-lg"
                   href="mailto:support@carptravel.com"
                 >
                   support@carptravel.com
@@ -75,7 +74,7 @@ export default function Contacts() {
               <ul>
                 <li>
                   <a
-                    className="text-sm not-italic font-normal leading-6 tablet:text-s desktop:text-base"
+                    className="active-link text-sm not-italic font-normal leading-6 tablet:text-base desktop:text-lg"
                     href="https://www.facebook.com/"
                   >
                     facebook
@@ -83,7 +82,7 @@ export default function Contacts() {
                 </li>
                 <li>
                   <a
-                    className="text-sm not-italic font-normal leading-6 tablet:text-s desktop:text-base"
+                    className="active-link text-sm not-italic font-normal leading-6 tablet:text-base desktop:text-lg"
                     href="https://www.instagram.com/"
                   >
                     instagram
@@ -91,7 +90,7 @@ export default function Contacts() {
                 </li>
                 <li>
                   <a
-                    className="text-sm not-italic font-normal leading-6 tablet:text-s desktop:text-base"
+                    className="active-link text-sm not-italic font-normal leading-6 tablet:text-base desktop:text-lg"
                     href="https://www.youtube.com/"
                   >
                     youtube
@@ -99,7 +98,7 @@ export default function Contacts() {
                 </li>
                 <li>
                   <a
-                    className="text-sm not-italic font-normal leading-6 tablet:text-s desktop:text-base"
+                    className="active-link text-sm not-italic font-normal leading-6 tablet:text-base desktop:text-lg"
                     href="https://www.tiktok.com/"
                   >
                     tiktok
@@ -170,15 +169,25 @@ export default function Contacts() {
 
               <div className="w-full flex flex-col">
                 <label className="label">Message</label>
-                <textarea className="textarea h-[193px] tablet:h-[221px] desktop:h-[174px] resize-none" />
+                <textarea className="textarea h-[193px] tablet:h-[221px] desktop:h-[174px] resize-none" 
+                {...register("message", { required: "This is required",})}
+                />
+                <div className="flex justify-end">
+                    {errors?.message && (
+                      <>
+                        <Image src={Close} alt="Close" width={18} height={18} />
+                        <p className="text-errorColor text-xs leading-6 tracking-[2.4px] ml-1">
+                          {errors?.message?.message}
+                        </p>
+                      </>
+                    )}
+                  </div>
               </div>
             </div>
             <div className="flex justify-end">
-              <input
-                className="text-primary cursor-pointer uppercase text-SM font-medium leading-normal desktop:text-m outline-none border-none"
-                type="submit"
-                value="send"
-              />
+              <button 
+                className="active-btn text-primary uppercase text-3xl font-medium leading-normal desktop:text-[32px] outline-none border-none"
+                type="submit">send</button>
             </div>
           </form>
         </div>

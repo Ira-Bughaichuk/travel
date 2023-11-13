@@ -6,14 +6,14 @@
 @tailwind utilities;
 
 .mainTitle{
-  @apply text-primary text-l not-italic font-thin leading-[56px] tracking-[-1.6px] uppercase 
-  tablet:leading-[1] tablet:text-xl tablet:tracking-[-2.68px]
-  desktop:text-xxl desktop:tracking-[-3.92px] 
+  @apply text-primary text-[40px] not-italic font-thin leading-[56px] tracking-[-1.6px] uppercase 
+  tablet:leading-[1] tablet:text-[67px] tablet:tracking-[-2.68px]
+  desktop:text-[98px] desktop:tracking-[-3.92px] 
 }
 .text{
   @apply text-primary not-italic text-sm font-extralight leading-[20px]
-  tablet:text-s tablet:leading-[20px]
-  desktop:text-base desktop:leading-[24px]
+  tablet:text-base tablet:leading-[20px]
+  desktop:text-lg desktop:leading-[24px]
 }
 
 .label{
@@ -21,7 +21,7 @@
   mb-1 desktop:mb-[6px] 
 }
 .input{
-  @apply placeholder:text-[13px]  placeholder:not-italic  placeholder:font-extralight  placeholder:leading-6 outline-none border-none desktop:placeholder:text-slS
+  @apply placeholder:text-[13px]  placeholder:not-italic  placeholder:font-extralight  placeholder:leading-6 outline-none border-none desktop:placeholder:text-xl
   placeholder:text-secondary 
   block pl-2 bg-bgInput 
   w-full h-6 desktop:h-7 
@@ -29,12 +29,19 @@
 
 
 .textarea{
-  @apply  placeholder:text-[13px] placeholder:not-italic placeholder:font-extralight placeholder:leading-6 outline-none border-none desktop:placeholder:text-slS
+  @apply  placeholder:text-[13px] placeholder:not-italic placeholder:font-extralight placeholder:leading-6 outline-none border-none desktop:placeholder:text-xl
   placeholder:text-secondary 
   block pl-2 bg-bgInput  tablet:mb-[9px] desktop:mb-6
   w-full
 }
 
+.active-link{
+  @apply cursor-pointer hover:decoration-2 focus:decoration-2  focus:underline hover:underline  duration-500
+}
+.active-btn{
+  @apply cursor-pointer  focus:text-secondary hover:text-secondary  hover:decoration-secondary duration-500
+
+}
 
 .checkbox-wrapper input[type="checkbox"] {
   -webkit-appearance: none;

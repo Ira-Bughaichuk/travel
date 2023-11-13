@@ -18,7 +18,7 @@ const defaultStateCareer: ConfigFormCareer = {
   position: "",
   phone: "",
   message: "",
-  isAgree: true,
+  isAgree: false,
 };
 export default function CareerForm() {
   const [isChecked, setIsChecked] = useState(defaultStateCareer.isAgree);
@@ -105,8 +105,7 @@ export default function CareerForm() {
             </div>
             <div>
               <label className="label" htmlFor="position">
-                {" "}
-                Position{" "}
+                Position
               </label>
               <input
                 className="input"
@@ -144,13 +143,23 @@ export default function CareerForm() {
 
             <div className="block mb:[18px] tablet:hidden">
               <label className="label" htmlFor="message">
-                {" "}
-                Message{" "}
+                Message
               </label>
               <textarea
                 className="textarea resize-none h-[196px] "
                 id="message"
-              />
+                {...register("message", { required: "This is required",})}
+                />
+                <div className="flex justify-end">
+                    {errors?.message && (
+                      <>
+                        <Image src={Close} alt="Close" width={18} height={18} />
+                        <p className="text-errorColor text-xs leading-6 tracking-[2.4px] ml-1">
+                          {errors?.message?.message}
+                        </p>
+                      </>
+                    )}
+                  </div>
             </div>
             <div className="hidden tablet:flex tablet:flex-row tablet:gap-x-2">
               <div className="checkbox-wrapper">
@@ -172,13 +181,23 @@ export default function CareerForm() {
           <div className="w-full">
             <div className="hidden tablet:flex tablet:flex-col w-full">
               <label className="label" htmlFor="message">
-                {" "}
-                Message{" "}
+                Message
               </label>
               <textarea
                 className="w-full textarea resize-none tablet:h-[228px] desktop:h-[268px]"
                 id="message"
-              />
+                {...register("message", { required: "This is required",})}
+                />
+                <div className="flex justify-end">
+                    {errors?.message && (
+                      <>
+                        <Image src={Close} alt="Close" width={18} height={18} />
+                        <p className="text-errorColor text-xs leading-6 tracking-[2.4px] ml-1">
+                          {errors?.message?.message}
+                        </p>
+                      </>
+                    )}
+                  </div>
             </div>
 
             <div className="flex flex-row gap-x-2 mb:4 tablet:hidden">
@@ -197,11 +216,9 @@ export default function CareerForm() {
               </label>
             </div>
             <div className="flex justify-end">
-              <input
-                className="text-primary cursor-pointer uppercase text-SM font-medium leading-normal desktop:text-m outline-none border-none"
-                type="submit"
-                value="send"
-              />
+              <button
+                className="active-btn text-primary cursor-pointer uppercase text-3xl font-medium leading-normal desktop:text-[32px] outline-none border-none"
+                type="submit">send</button>
             </div>
           </div>
         </div>

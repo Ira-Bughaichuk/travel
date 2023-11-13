@@ -76,7 +76,7 @@ const carouselSettings = {
         scale: 0.45,
       },
     },
-    1440: {
+    1280: {
       coverflowEffect: {
         rotate: 0,
         stretch: 120,
@@ -91,7 +91,7 @@ const carouselSettings = {
 export default function Gallery() {
   return (
     <section
-      id="gallery"
+      id="/gallery"
       className="w-full bg-Gallery bg-no-repeat bg-cover bg-center text-primary pt-[56px] pb-[53px] px-[20px] tablet:pt-[73px] tablet:pb-[64px] tablet:px-[32px]  desktop:pt-[106px] desktop:pb-[104px] desktop:px-[104px]"
     >
       <h2 className="mainTitle mb-6 tablet:mb-[65px] tablet:text-center desktop:text-left desktop:mb-[15px]">
@@ -142,8 +142,8 @@ export default function Gallery() {
               </SwiperSlide>
             ))}
           </Swiper>
-          <button className="swiper-button-prev">BACK</button>
-          <button className="swiper-button-next">NEXT</button>
+          <button type="button" className="swiper-button-prev">BACK</button>
+          <button type="button" className="swiper-button-next">NEXT</button>
         </div>
       </div>
     </section>

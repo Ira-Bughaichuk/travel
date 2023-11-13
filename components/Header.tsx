@@ -11,12 +11,10 @@ export default function Header() {
     setOpen(prev=>!prev)
 }
   return (
-    <header className="bg-transparent w-full ">
-      <div className="flex items-center justify-between py-[36px] px-[20px] md:w-auto w-full tablet:py-[25px] tablet:px-[32px] desktop:py-[24px] desktop:px-[104px]">  
-      <Logo />      
-      <Nav open={open}/>
-      <ButtonNav open={open} handlerToggle={handlerToggle} />
+      <div className="flex  items-center justify-between py-[36px] px-[20px] md:w-auto w-full tablet:py-[25px] tablet:px-[32px] desktop:py-[24px] desktop:px-[104px] ">  
+        <Logo />      
+        <Nav open={open} handlerToggle={handlerToggle}/>
+        <ButtonNav open={open} handlerToggle={handlerToggle} />
      </div>
-    </header>
   )
 }

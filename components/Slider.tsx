@@ -89,7 +89,7 @@ export default function Slider() {
                     <h2 className="mainTitle">
                       WE <span className="font-medium">OFFER</span>
                     </h2>
-                    <p className="tablet:hidden text-right mb-2 mt-6 not-italic font-thin leading-[1] text-L">
+                    <p className="tablet:hidden text-right mb-2 mt-6 not-italic font-thin leading-[1] text-[43px]">
                       0{index + 1}/<span className="text-secondary">05</span>
                     </p>
                     <Image
@@ -106,14 +106,14 @@ export default function Slider() {
 
                   <div className=" desktop:flex-1 tablet:w-2/5 desktop:w-3/5 flex flex-col desktop:flex-row desktop:gap-x-15">
                     <div className="flex flex-col mb-[34px]  tablet:mb-[25px] desktop:mb-6  tablet:gap-y-10 desktop:gap-y-5">
-                      <p className="hidden tablet:block not-italic font-thin leading-[1] text-L tablet:text-xl tablet:leading-[78px] desktop:leading-[1] desktop:text-xxl">
+                      <p className="hidden tablet:block not-italic font-thin leading-[1] text-[43px] tablet:text-[67px] tablet:leading-[78px] desktop:leading-[1] desktop:text-[98px]">
                         0{index + 1}/<span className="text-secondary">05</span>
                       </p>
                       <ul className="flex flex-col gap-y-4 desktop:gap-y-6 ">
                         {"ATVs Traveling" === itemSlide.title ? (
                           <li className="font-medium flex flex-row items-center gap-x-2 desktop:relative">
                             <span className="block bg-primary rotate-45 w-[6px] h-[6px]" />
-                            <span className="slideText desktop:w-[227px]">
+                            <span className="slideText desktop:w-[227px] ">
                               ATVs Traveling
                             </span>
                             <span className="desktop:absolute desktop:top-0 desktop:left-[304px] desktop:w-[200px] hidden desktop:block text-xs not-italic font-extralight leading-6 tracking-[2.4px]">
@@ -122,7 +122,7 @@ export default function Slider() {
                           </li>
                         ) : (
                           <li
-                            className="slideText"
+                            className="slideText text-secondary"
                             onClick={() => handleSlideClick(0)}
                           >
                             ATVs Traveling
@@ -132,7 +132,7 @@ export default function Slider() {
                         {"Rock climbing" === itemSlide.title ? (
                           <li className="font-medium flex flex-row items-center gap-x-2 desktop:relative">
                             <span className="block bg-primary rotate-45 w-[6px] h-[6px]" />
-                            <span className="slideText desktop:w-[227px]">
+                            <span className="slideText desktop:w-[227px] ">
                               Rock climbing
                             </span>
                             <span className="desktop:absolute desktop:top-0 desktop:left-[304px] desktop:w-[200px] hidden desktop:block text-xs not-italic font-extralight leading-6 tracking-[2.4px]">
@@ -141,7 +141,7 @@ export default function Slider() {
                           </li>
                         ) : (
                           <li
-                            className="slideText"
+                            className="slideText text-secondary"
                             onClick={() => handleSlideClick(1)}
                           >
                             Rock climbing
@@ -160,7 +160,7 @@ export default function Slider() {
                           </li>
                         ) : (
                           <li
-                            className="slideText"
+                            className="slideText text-secondary"
                             onClick={() => handleSlideClick(2)}
                           >
                             Hot air ballooning
@@ -179,7 +179,7 @@ export default function Slider() {
                           </li>
                         ) : (
                           <li
-                            className="slideText"
+                            className="slideText text-secondary"
                             onClick={() => handleSlideClick(3)}
                           >
                             Skydiving
@@ -198,7 +198,7 @@ export default function Slider() {
                           </li>
                         ) : (
                           <li
-                            className="slideText"
+                            className="slideText text-secondary"
                             onClick={() => handleSlideClick(4)}
                           >
                             Rafting

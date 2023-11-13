@@ -17,7 +17,7 @@
     height: 100%;
   }
   .slideText{
-    @apply uppercase not-italic font-extralight text-slS leading-[17px] tablet:text-slM tablet:leading-[18px] desktop:text-slL desktop:leading-6
+    @apply uppercase not-italic font-extralight text-xl leading-[17px] tablet:text-[22px] tablet:leading-[18px] desktop:text-[28px] desktop:leading-6
   }
    /* .swiper-slide img {
     @apply block object-contain w-full h-auto
