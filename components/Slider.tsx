@@ -63,14 +63,14 @@ export default function Slider() {
       swiperRef.current.swiper.slideTo(index, 500);
     }
   };
+ 
   return (
-    <>
-      <Swiper
+    <Swiper
         className="w-full h-full relative"
         ref={swiperRef}
         pagination={{ type: "fraction" }}
         effect={"fade"}
-        grabCursor={true}
+        grabCursor={false}
         navigation={true}
         slidesPerView={1}
         modules={[EffectFade]}
@@ -82,23 +82,30 @@ export default function Slider() {
                 background: `url(${itemSlide.bgImage}) center/cover no-repeat `,
                 height: "100%",
               }}
-            >
-              <div className="text-primary pt-[56px] pb-[53px] px-[20px] tablet:pt-[73px] tablet:pb-[64px] tablet:px-[32px]  desktop:pt-[106px] desktop:pb-[104px] desktop:px-[104px]">
+            > 
+              <div className="container mx-auto container-main">
                 <div className="flex flex-col tablet:flex-row tablet:gap-x-5 ">
                   <div className="tablet:flex desktop:flex-1 tablet:flex-col tablet:gap-y-10 desktop:gap-y-5 tablet:w-3/5 desktop:w-2/5">
                     <h2 className="mainTitle">
                       WE <span className="font-medium">OFFER</span>
                     </h2>
-                    <p className="tablet:hidden text-right mb-2 mt-6 not-italic font-thin leading-[1] text-[43px]">
+                    <p className="tablet:hidden text-right mb-2 mt-6 not-italic font-thin leading-[1] text-[43px] ">
                       0{index + 1}/<span className="text-secondary">05</span>
                     </p>
-                    <Image
-                      src={itemSlide.slideImage}
-                      alt="ATVs Traveling"
-                      width={280}
-                      height={213}
-                      className="swiper-slide"
-                    />
+                   
+                     {/* w-[218px] h-[213px] tablet:w-[463px] tablet:h-[370px] desktop:w-[608px] desktop:h-[434px]"> */}
+                      <Image
+                        src={itemSlide.slideImage}
+                        alt={itemSlide.title}
+                        width={608}
+                        height={434}
+                        sizes="100vw"
+                        style={{
+                          objectFit: 'cover',
+                            width: '100%',
+                            height: 'auto',
+                        }}
+                      />
                     <p className="tablet:hidden text-right mb-6 mt-1 text-xs not-italic font-extralight leading-6 tracking-[2.4px] laptop:mb-[34px]">
                       {itemSlide.subTitle}
                     </p>
@@ -111,7 +118,7 @@ export default function Slider() {
                       </p>
                       <ul className="flex flex-col gap-y-4 desktop:gap-y-6 ">
                         {"ATVs Traveling" === itemSlide.title ? (
-                          <li className="font-medium flex flex-row items-center gap-x-2 desktop:relative">
+                          <li className="cursor-pointer font-medium flex flex-row items-center gap-x-2 desktop:relative">
                             <span className="block bg-primary rotate-45 w-[6px] h-[6px]" />
                             <span className="slideText desktop:w-[227px] ">
                               ATVs Traveling
@@ -122,7 +129,7 @@ export default function Slider() {
                           </li>
                         ) : (
                           <li
-                            className="slideText text-secondary"
+                            className="cursor-pointer slideText text-secondary"
                             onClick={() => handleSlideClick(0)}
                           >
                             ATVs Traveling
@@ -130,7 +137,7 @@ export default function Slider() {
                         )}
 
                         {"Rock climbing" === itemSlide.title ? (
-                          <li className="font-medium flex flex-row items-center gap-x-2 desktop:relative">
+                          <li className="cursor-pointer font-medium flex flex-row items-center gap-x-2 desktop:relative">
                             <span className="block bg-primary rotate-45 w-[6px] h-[6px]" />
                             <span className="slideText desktop:w-[227px] ">
                               Rock climbing
@@ -141,7 +148,7 @@ export default function Slider() {
                           </li>
                         ) : (
                           <li
-                            className="slideText text-secondary"
+                            className="cursor-pointer slideText text-secondary"
                             onClick={() => handleSlideClick(1)}
                           >
                             Rock climbing
@@ -149,7 +156,7 @@ export default function Slider() {
                         )}
 
                         {"Hot air ballooning" === itemSlide.title ? (
-                          <li className="font-medium flex flex-row items-center gap-x-2 desktop:relative">
+                          <li className="cursor-pointer font-medium flex flex-row items-center gap-x-2 desktop:relative">
                             <span className="block bg-primary rotate-45 w-[6px] h-[6px]" />
                             <span className="slideText desktop:w-[227px]">
                               Hot air ballooning
@@ -160,7 +167,7 @@ export default function Slider() {
                           </li>
                         ) : (
                           <li
-                            className="slideText text-secondary"
+                            className="cursor-pointer slideText text-secondary"
                             onClick={() => handleSlideClick(2)}
                           >
                             Hot air ballooning
@@ -168,7 +175,7 @@ export default function Slider() {
                         )}
 
                         {"Skydiving" === itemSlide.title ? (
-                          <li className="font-medium flex flex-row items-center gap-x-2 desktop:relative">
+                          <li className="cursor-pointer font-medium flex flex-row items-center gap-x-2 desktop:relative">
                             <span className="block bg-primary rotate-45 w-[6px] h-[6px]" />
                             <span className="slideText desktop:w-[227px]">
                               Skydiving
@@ -179,7 +186,7 @@ export default function Slider() {
                           </li>
                         ) : (
                           <li
-                            className="slideText text-secondary"
+                            className="cursor-pointer slideText text-secondary"
                             onClick={() => handleSlideClick(3)}
                           >
                             Skydiving
@@ -187,7 +194,7 @@ export default function Slider() {
                         )}
 
                         {"Rafting" === itemSlide.title ? (
-                          <li className="font-medium flex flex-row items-center gap-x-2 desktop:relative">
+                          <li className="cursor-pointer font-medium flex flex-row items-center gap-x-2 desktop:relative">
                             <span className="block bg-primary rotate-45 w-[6px] h-[6px]" />
                             <span className="slideText desktop:w-[220px]">
                               Rafting
@@ -198,7 +205,7 @@ export default function Slider() {
                           </li>
                         ) : (
                           <li
-                            className="slideText text-secondary"
+                            className="cursor-pointer slideText text-secondary"
                             onClick={() => handleSlideClick(4)}
                           >
                             Rafting
@@ -221,7 +228,10 @@ export default function Slider() {
             </div>
           </SwiperSlide>
         ))}
-      </Swiper>
-    </>
+    </Swiper>
   );
 }
+
+  
+
+ 

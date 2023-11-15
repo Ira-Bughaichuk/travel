@@ -6,11 +6,8 @@ import CareerForm from "./CareerForm";
 export default function Career() {
   return (
     <>
-      <section
-        id="/career"
-        className="bg-Career bg-cover bg-no-repeat bg-center"
-      >
-        <div className="text-primary pt-[56px] pb-[53px] px-[20px] tablet:pt-[73px] tablet:pb-[64px] tablet:px-[32px]  desktop:pt-[106px] desktop:pb-[104px] desktop:px-[104px]">
+      <section id="/career" className="bg-Career bg-cover bg-no-repeat bg-center">
+        <div className="container mx-auto container-main">
           <div>
             <div className="mb-6 tablet:mb-3 desktop:mb-6 tablet:flex tablet:flex-row tablet:justify-between tablet:items-center">
               <h2 className="mainTitle">

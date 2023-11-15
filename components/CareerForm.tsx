@@ -3,13 +3,14 @@ import Image from "next/image";
 import { useState } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import Close from "../public/assets/icons/close.svg";
+import toast  from 'react-hot-toast';
 
 type ConfigFormCareer = {
   fullName: string;
   email: string;
   position: string;
   phone: string;
-  message: string;
+  messages: string;
   isAgree: boolean;
 };
 const defaultStateCareer: ConfigFormCareer = {
@@ -17,7 +18,7 @@ const defaultStateCareer: ConfigFormCareer = {
   email: "",
   position: "",
   phone: "",
-  message: "",
+  messages: "",
   isAgree: false,
 };
 export default function CareerForm() {
@@ -34,7 +35,7 @@ export default function CareerForm() {
       `Full Name:${data.fullName},
          Email:${data.email},
          Phone:${data.phone},
-         Message:${data.message || ""},
+         Messages:${data.messages || ""},
             ${
               data.isAgree
                 ? "Consent to the processing of personal data."
@@ -48,15 +49,14 @@ export default function CareerForm() {
     <>
       <form action="#" onSubmit={handleSubmit(onSubmit)} className="w-full">
         <div className="text-primary flex flex-col gap-y-4 tablet:flex-row tablet:gap-x-5 desktop:gap-x-6 ">
-          <div className="flex flex-col gap-y-4 desktop:gap-y-[26px]">
-            <div className="flex flex-col">
+          <div className="flex flex-col gap-y-4 desktop:gap-y-[26px] ">
+            <div className=" flex flex-col">
               <label className="label">Full name</label>
               <input
                 className="input"
                 placeholder="John Smith"
                 {...register("fullName", {
-                  required: "Incorrect name",
-                  minLength: { value: 7, message: "Min length is 7" },
+                  required: "This is required",
                   pattern: {
                     value: /^[A-Za-z]+$/i,
                     message: "Enter only words",
@@ -146,20 +146,19 @@ export default function CareerForm() {
                 Message
               </label>
               <textarea
-                className="textarea resize-none h-[196px] "
-                id="message"
-                {...register("message", { required: "This is required",})}
-                />
-                <div className="flex justify-end">
-                    {errors?.message && (
+                className="textarea resize-none h-[196px]"
+                id="message"/>
+                 {/* {...register("messages", { required: "This is required",})} */}
+                {/* <div className="flex justify-end">
+                    {errors?.messages && (
                       <>
                         <Image src={Close} alt="Close" width={18} height={18} />
                         <p className="text-errorColor text-xs leading-6 tracking-[2.4px] ml-1">
-                          {errors?.message?.message}
+                          {errors?.messages?.message}
                         </p>
                       </>
                     )}
-                  </div>
+                  </div> */}
             </div>
             <div className="hidden tablet:flex tablet:flex-row tablet:gap-x-2">
               <div className="checkbox-wrapper">
@@ -185,19 +184,18 @@ export default function CareerForm() {
               </label>
               <textarea
                 className="w-full textarea resize-none tablet:h-[228px] desktop:h-[268px]"
-                id="message"
-                {...register("message", { required: "This is required",})}
-                />
-                <div className="flex justify-end">
-                    {errors?.message && (
+                id="messages"/>
+                {/* {...register("messages", { required: "This is required",})} */}
+                {/* <div className="flex justify-end">
+                    {errors?.messages && (
                       <>
                         <Image src={Close} alt="Close" width={18} height={18} />
                         <p className="text-errorColor text-xs leading-6 tracking-[2.4px] ml-1">
-                          {errors?.message?.message}
+                          {errors?.messages?.message}
                         </p>
                       </>
                     )}
-                  </div>
+                  </div> */}
             </div>
 
             <div className="flex flex-row gap-x-2 mb:4 tablet:hidden">

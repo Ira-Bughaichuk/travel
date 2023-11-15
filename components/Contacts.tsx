@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { useForm, SubmitHandler } from "react-hook-form";
 import Close from "../public/assets/icons/close.svg";
+import toast  from 'react-hot-toast';
 
 type ConfigFormContacts = {
   fullName: string;
@@ -29,11 +30,8 @@ export default function Contacts() {
     reset();
   };
   return (
-    <section
-      id="/contacts"
-      className="bg-Contacts bg-cover bg-no-repeat bg-center"
-    >
-      <div className="text-primary pt-[56px] pb-[53px] px-[20px] tablet:pt-[73px] tablet:pb-[64px] tablet:px-[32px]  desktop:pt-[106px] desktop:pb-[104px] desktop:px-[104px]">
+    <section id="/contacts" className="bg-Contacts bg-cover bg-no-repeat bg-center">
+      <div className="container mx-auto container-main">
         <h2 className="mainTitle mb-9 tablet:mb-10 desktop:mb-[71px]">
           Contact <span className="font-medium">US</span>
         </h2>

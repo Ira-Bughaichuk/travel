@@ -5,6 +5,9 @@
 @tailwind components;
 @tailwind utilities;
 
+.container-main{
+  @apply text-primary pt-[56px] pb-[53px] px-[20px] tablet:pt-[73px] tablet:pb-[64px] tablet:px-[32px]  desktop:pt-[106px] desktop:pb-[104px] desktop:px-[104px]       
+}
 .mainTitle{
   @apply text-primary text-[40px] not-italic font-thin leading-[56px] tracking-[-1.6px] uppercase 
   tablet:leading-[1] tablet:text-[67px] tablet:tracking-[-2.68px]

@@ -15,7 +15,7 @@ const config: Config = {
       'laptop': {'min': '768px', 'max': '1279px'},
       'desktop': '1280px',
     },
-    // fontSize: {
+    //fontSize: {
     //   xxs: '10px',
     //   xs: '12px',
     //   sm: '14px',
@@ -28,11 +28,11 @@ const config: Config = {
     //   SM:'30px',
     //   m:'32px',
     //   ML:"36px",
-    //   l:'40px',
+     //sliderMob:'40px',
     //   L:'43px',
-    //   xl:'67px',
-    //   xxl:'98px',
-    // },
+    //   sliderTab:'67px',
+     //  sliderDesc:'98px',
+    //},
     extend: {
       fontFamily: {
         Inter: "Inter",
