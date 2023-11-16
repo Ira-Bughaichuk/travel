@@ -112,9 +112,12 @@ export default function Contacts() {
           >
             <div className="mb-4 desktop:mb-6 w-full flex flex-col gap-y-6 tablet:gap-x-5 desktop:gap-y-[40px]  tablet:flex-row  desktop:flex-col">
               <div className="desktop:w-full flex flex-col gap-y-[25px] tablet:gap-y-7 desktop:flex-row desktop:gap-x-5">
-                <div className="flex flex-col tablet:w-[221px] desktop:w-full">
-                  <label className="label">Full name</label>
+                <div className="flex flex-col tablet:w-[221px] desktop:w-full relative">
+                  <label className="label" htmlFor="contact-name">Full name</label>
                   <input
+                    id="contact-name"
+                    autoComplete="name"
+                    aria-label="Name"
                     className="input"
                     placeholder="John Smith"
                     {...register("fullName", {
@@ -126,20 +129,23 @@ export default function Contacts() {
                       },
                     })}
                   />
-                  <div className="flex justify-end">
+                  <div className="flex justify-end absolute bottom-[-22px] right-0">
                     {errors?.fullName && (
-                      <>
-                        <Image src={Close} alt="Close" width={18} height={18} />
+                      <div className="flex fle-row items-center">
+                        <Image src={Close} alt="Close Icon" className="w-[18px] h-[18px]" />
                         <p className="text-errorColor text-xs leading-6 tracking-[2.4px] ml-1">
                           {errors?.fullName?.message}
                         </p>
-                      </>
+                      </div>
                     )}
                   </div>
                 </div>
-                <div className=" flex flex-col tablet:w-[221px] desktop:w-full">
-                  <label className="label">E-mail</label>
+                <div className=" flex flex-col tablet:w-[221px] desktop:w-full relative">
+                  <label className="label" htmlFor="contact-email">E-mail</label>
                   <input
+                    id="contact-email"
+                    autoComplete="email"
+                    aria-label="Email"
                     className="input"
                     type="e-mail"
                     placeholder="johnsmith@email.com"
@@ -152,32 +158,36 @@ export default function Contacts() {
                       },
                     })}
                   />
-                  <div className="flex justify-end">
+                  <div className="flex justify-end absolute bottom-[-22px] right-0">
                     {errors?.email && (
-                      <>
-                        <Image src={Close} alt="Close" width={18} height={18} />
+                      <div className="flex fle-row items-center">
+                        <Image src={Close} alt="Close Icon" className="w-[18px] h-[18px]"/>
                         <p className="text-errorColor text-xs leading-6 tracking-[2.4px] ml-1">
                           {errors?.email?.message}
                         </p>
-                      </>
+                      </div>
                     )}
                   </div>
                 </div>
               </div>
 
-              <div className="w-full flex flex-col">
-                <label className="label">Message</label>
-                <textarea className="textarea h-[193px] tablet:h-[221px] desktop:h-[174px] resize-none" 
+              <div className="w-full flex flex-col relative">
+                <label className="label" htmlFor="contact-message">Message</label>
+                <textarea 
+                  id="contact-message"
+                  autoComplete="message"
+                  aria-label="Message"
+                  className="textarea h-[193px] tablet:h-[221px] desktop:h-[174px] resize-none" 
                 {...register("message", { required: "This is required",})}
                 />
-                <div className="flex justify-end">
+                <div className="flex justify-end absolute bottom-0 right-0">
                     {errors?.message && (
-                      <>
-                        <Image src={Close} alt="Close" width={18} height={18} />
+                      <div className="flex fle-row items-center">
+                        <Image src={Close}  alt="Close Icon" className="w-[18px] h-[18px]" />
                         <p className="text-errorColor text-xs leading-6 tracking-[2.4px] ml-1">
                           {errors?.message?.message}
                         </p>
-                      </>
+                      </div>
                     )}
                   </div>
               </div>

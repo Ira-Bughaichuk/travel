@@ -13,7 +13,7 @@ export default function Career() {
               <h2 className="mainTitle">
                 <span className="font-medium">Choose</span> US
               </h2>
-              <p className="hidden tablet:block w-[179px] tablet:w-[221px] desktop:w-[293px] text tablet:text-[13px]">
+              <p className="hidden tablet:block w-[179px] tablet:w-[221px] desktop:w-[216px] text tablet:text-[13px]">
                 Your chance to join our passionate team in Carpathian tourism.
                 Seeking talented professionals to share our common mission.
               </p>
@@ -72,9 +72,9 @@ export default function Career() {
               </ul>
 
               {/* tablet */}
-              <div className="w-full hidden tablet:flex tablet:flex-col tablet:gap-y-8 desktop:gap-y-[14px]">
+              <div className="w-full hidden tablet:flex tablet:flex-col tablet:gap-y-8 desktop:gap-y-[0] desktop:relative">
                 <div className="w-full">
-                  <p className="tablet:w-[221px] desktop:w-[234px] not-italic font-extralight leading-5 text-sm tablet:text-[13px] desktop:text-lg desktop:leading-6">
+                  <p className="tablet:w-[221px] desktop:absolute desktop:top-[-104px] desktop:left-0  desktop:w-[234px] not-italic font-extralight leading-5 text-sm tablet:text-[13px] desktop:text-lg desktop:leading-6">
                     Don`t miss your opportunity!
                     <br /> Fill out the form right now and join our team!
                   </p>

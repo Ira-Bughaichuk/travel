@@ -7,7 +7,7 @@ export default function Logo() {
       <Image
         src={LogoIcon}
         alt="Logo is CarpTravel"
-        className="flex  w-[59px] h-[21px] desktop:w-[61px] desktop:h-[22px]"
+        className="flex w-[59px] h-[21px] desktop:w-[61px] desktop:h-[22px]"
         priority
       />
       <h1 className="flex font-Karantina text-primary text-sm not-italic font-normal tracking-[2.59px] text-cap leading-trim leading-both">

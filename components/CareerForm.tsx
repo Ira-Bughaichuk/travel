@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
-import Close from "../public/assets/icons/close.svg";
+import Close from "/public/assets/icons/close.svg";
 import toast  from 'react-hot-toast';
 
 type ConfigFormCareer = {
@@ -49,10 +49,13 @@ export default function CareerForm() {
     <>
       <form action="#" onSubmit={handleSubmit(onSubmit)} className="w-full">
         <div className="text-primary flex flex-col gap-y-4 tablet:flex-row tablet:gap-x-5 desktop:gap-x-6 ">
-          <div className="flex flex-col gap-y-4 desktop:gap-y-[26px] ">
-            <div className=" flex flex-col">
-              <label className="label">Full name</label>
+          <div className="flex flex-col gap-y-4 desktop:gap-y-[26px] desktop:w-1/2">
+            <div className="flex flex-col relative">
+              <label className="label" htmlFor="career-name">Full name</label>
               <input
+                id="career-name"
+                autoComplete="name"
+                aria-label="Name"
                 className="input"
                 placeholder="John Smith"
                 {...register("fullName", {
@@ -63,24 +66,26 @@ export default function CareerForm() {
                   },
                 })}
               />
-              <div className="flex justify-end">
+              <div className="flex justify-end absolute bottom-[-22px] right-0">
                 {errors?.fullName && (
-                  <>
-                    <Image src={Close} alt="Close" width={18} height={18} />
+                  <div className="flex fle-row items-center">
+                    <Image src={Close} alt="Close Icon" className="w-[18px] h-[18px]" />
                     <p className="text-errorColor text-xs leading-6 tracking-[2.4px] ml-1">
                       {errors?.fullName?.message}
                     </p>
-                  </>
+                  </div>
                 )}
               </div>
             </div>
-            <div>
-              <label className="label" htmlFor="email">
+            <div className="relative">
+              <label className="label" htmlFor="career-email">
                 E-mail
               </label>
               <input
+                id="career-email"
+                autoComplete="email"
+                aria-label="Email"
                 className="input"
-                id="email"
                 type="e-mail"
                 placeholder="johnsmith@email.com"
                 {...register("email", {
@@ -92,14 +97,14 @@ export default function CareerForm() {
                   },
                 })}
               />
-              <div className="flex justify-end">
+              <div className="flex justify-end absolute bottom-[-22px] right-0">
                 {errors?.email && (
-                  <>
-                    <Image src={Close} alt="Close" width={18} height={18} />
+                  <div className="flex fle-row items-center">
+                    <Image src={Close} alt="Close Icon" className="w-[18px] h-[18px]"/>
                     <p className="text-errorColor text-xs leading-6 tracking-[2.4px] ml-1">
                       {errors?.email?.message}
                     </p>
-                  </>
+                  </div>
                 )}
               </div>
             </div>
@@ -115,13 +120,15 @@ export default function CareerForm() {
                 {...register("position")}
               />
             </div>
-            <div>
-              <label className="label" htmlFor="phone">
+            <div className="relative">
+              <label className="label" htmlFor="career-phone">
                 Phone
               </label>
               <input
+                id="career-phone"
+                autoComplete="phone"
+                aria-label="Phone"
                 className="input"
-                id="phone"
                 type="tell"
                 placeholder="+ 38 (097) 12 34 567"
                 {...register("phone", {
@@ -129,25 +136,27 @@ export default function CareerForm() {
                   pattern: { value: /^\+380\d{9}$/, message: "Invalid phone" },
                 })}
               />
-              <div className="flex justify-end">
+              <div className="flex justify-end absolute bottom-[-22px] right-0">
                 {errors?.phone && (
-                  <>
-                    <Image src={Close} alt="Close" width={18} height={18} />
+                  <div className="flex fle-row items-center">
+                    <Image src={Close} alt="Close Icon" className="w-[18px] h-[18px]" />
                     <p className="text-errorColor text-xs leading-6 tracking-[2.4px] ml-1">
                       {errors?.phone?.message}
                     </p>
-                  </>
+                  </div>
                 )}
               </div>
             </div>
 
             <div className="block mb:[18px] tablet:hidden">
-              <label className="label" htmlFor="message">
+              <label className="label" htmlFor="career-message">
                 Message
               </label>
               <textarea
-                className="textarea resize-none h-[196px]"
-                id="message"/>
+                id="career-message"
+                autoComplete="message"
+                aria-label="Message"
+                className="textarea resize-none h-[196px]"/>
                  {/* {...register("messages", { required: "This is required",})} */}
                 {/* <div className="flex justify-end">
                     {errors?.messages && (
@@ -160,9 +169,12 @@ export default function CareerForm() {
                     )}
                   </div> */}
             </div>
-            <div className="hidden tablet:flex tablet:flex-row tablet:gap-x-2">
+            <div className="hidden tablet:flex tablet:flex-row tablet:gap-x-2 desktop:align-items">
               <div className="checkbox-wrapper">
                 <input
+                  id="career-check"
+                  autoComplete="check"
+                  aria-label="Check agreement checkbox"
                   type="checkbox"
                   id="isAgree"
                   {...register("isAgree")}
@@ -171,7 +183,7 @@ export default function CareerForm() {
                   className={isChecked ? "checked" : ""}
                 />
               </div>
-              <label className="tablet:w-[192px] desktop:w-[258px] text-primary text-xs not-italic font-extralight leading-5">
+              <label htmlFor="career-check" className="tablet:w-[192px] desktop:w-[258px] text-primary text-xs not-italic font-extralight leading-5">
                 I confirm my consent to the processing of personal data.
               </label>
             </div>
@@ -179,12 +191,14 @@ export default function CareerForm() {
 
           <div className="w-full">
             <div className="hidden tablet:flex tablet:flex-col w-full">
-              <label className="label" htmlFor="message">
+              <label className="label" htmlFor="career-tabl-messages">
                 Message
               </label>
               <textarea
-                className="w-full textarea resize-none tablet:h-[228px] desktop:h-[268px]"
-                id="messages"/>
+              id="career-tabl-message"
+              autoComplete="messages"
+              aria-label="Messages"
+                className="w-full textarea resize-none tablet:h-[228px] desktop:h-[268px]"/>
                 {/* {...register("messages", { required: "This is required",})} */}
                 {/* <div className="flex justify-end">
                     {errors?.messages && (
@@ -201,6 +215,9 @@ export default function CareerForm() {
             <div className="flex flex-row gap-x-2 mb:4 tablet:hidden">
               <div className="checkbox-wrapper">
                 <input
+                  id="career-tabl-check"
+                  autoComplete="check"
+                  aria-label="Check agreement checkbox"
                   type="checkbox"
                   id="isAgree"
                   {...register("isAgree")}
@@ -209,7 +226,7 @@ export default function CareerForm() {
                   className={isChecked ? "checked" : ""}
                 />
               </div>
-              <label className=" w-full text-primary text-xs not-italic font-extralight leading-5">
+              <label htmlFor="career-tabl-check" className=" w-full text-primary text-xs not-italic font-extralight leading-5">
                 I confirm my consent to the processing of personal data.
               </label>
             </div>
