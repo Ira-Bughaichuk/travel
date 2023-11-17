@@ -1,11 +1,39 @@
-import "./globals.css";
+import "./globals.scss";
 
+import { Inter } from 'next/font/google';
 import type { Metadata } from "next";
+import { Toaster } from 'react-hot-toast';
 
-export const metadata: Metadata = {
-  title: "CarpTravel",
-  description: "Main peaces to travel",
-};
+import Header from "@/components/Header";
+
+const inter = Inter({ subsets: ['latin'] });
+
+// export const metadata: Metadata = {
+//   title: 'CarpTravel',
+//   description: "The most beutiful places of rest",
+//   icons: [
+//     {
+//       url: 'icons/favicon-dark.svg',
+//       media: '(prefers-color-scheme: dark)',
+//       rel: 'icon',
+//       type: 'image/svg',
+//     },
+//     {
+//       url: '/icons/favicon-light.svg',
+//       media: '(prefers-color-scheme: light)',
+//       rel: 'icon',
+//       type: 'image/svg',
+//     },
+//   ],
+//   openGraph: {
+//     type: 'website',
+//     url: 'http://localhost:3000',
+//     title: 'CarpTravel',
+//     description: 'The most beutiful places of rest',
+//     siteName: 'CarpTravel',
+//     images: [{ url: '/ogp/Logo.jpg' }, { url: '/ogp/Logo.png' }],
+//   },
+// }
 
 export default function RootLayout({
   children,
@@ -14,10 +42,22 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
-        <link href="/favicon.ico" rel="icon" type="image/x-icon" />
-      </head>
-      <body className="font-Inter">{children}</body>
+      <body className={inter.className}>
+        <Header />
+        {children}
+        <Toaster
+          position="top-center"
+          reverseOrder={false}
+          toastOptions={{
+            style: {
+              borderRadius: '10px',
+              background: 'rgba(2, 15, 8, 0.75)',
+              color: '#fff'
+            },
+            duration: 2500,
+          }}
+        />
+      </body>
     </html>
   );
 }

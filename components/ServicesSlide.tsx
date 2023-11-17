@@ -1,89 +1,14 @@
-"use client";
+import { ServicesSlideProps } from "@/utils/types";
 import Image from "next/image";
-import { useRef } from "react";
-import { Swiper, SwiperSlide, SwiperRef } from "swiper/react";
-import { EffectFade } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/effect-fade";
-import "./slider.css";
 
-
-const contextSlider = [
-  {
-    title: "ATVs Traveling",
-    subTitle: "Feel the adrenaline rush",
-    description:
-      "Join exciting rafting expeditions on the waterways of the Carpathians. Go through challenging waterways and overcome gusty waves, feel the adrenaline, and enjoy the incredible views of the surrounding mountains.",
-    bgImage: "/assets/images/services-desc01.jpg",
-    slideImage: "/assets/images/services-slide01.jpg",
-    id: 1,
-  },
-  {
-    title: "Rock climbing",
-    subTitle: "Destroy your limitations",
-    description:
-      "Overcome the peaks of the Carpathians in a unique way - climbing. Make your own way to the heights and find inner peace in the embrace of the mighty rocks.",
-    bgImage: "/assets/images/services-desc02.jpg",
-    slideImage: "/assets/images/services-slide02.jpg",
-    id: 2,
-  },
-  {
-    title: "Hot air ballooning",
-    subTitle: "Get inspired",
-    description:
-      "Feel Zen over the mountain peaks! Hot air ballooning gives you incredible impressions and panoramas of the Carpathians that seem endless.",
-    bgImage: "/assets/images/services-desc03.jpg",
-    slideImage: "/assets/images/services-slide03.jpg",
-    id: 3,
-  },
-  {
-    title: "Skydiving",
-    subTitle: "Overcome your fears",
-    description:
-      "Fly in the sky over the Carpathians! Experienced instructors will help you realize your dream of free flight. Remember the incredible emotions and panoramas from a bird's eye view forever.",
-    bgImage: "/assets/images/services-desc04.jpg",
-    slideImage: "/assets/images/services-slide04.jpg",
-    id: 4,
-  },
-  {
-    title: "Rafting",
-    subTitle: "Trust the flow",
-    description:
-      "Join exciting rafting expeditions on the waterways of the Carpathians. Go through challenging waterways and overcome gusty waves, feel the adrenaline, and enjoy the incredible views of the surrounding mountains.",
-    bgImage: "/assets/images/services-desc05.jpg",
-    slideImage: "/assets/images/services-slide05.jpg",
-    id: 5,
-  },
-];
-
-export default function Slider() {
-  const swiperRef = useRef<SwiperRef | null>(null);
-  const handleSlideClick = (index: number) => {
-    if (swiperRef.current) {
-      swiperRef.current.swiper.slideTo(index, 500);
-    }
-  };
- 
+export const ServicesSlide: React.FC<ServicesSlideProps> = ({
+  src,srcImg, index, subTitle, title, description, handleSlideClick
+  }) => {
   return (
-    <Swiper
-        className="w-full h-full relative"
-        ref={swiperRef}
-        pagination={{ type: "fraction" }}
-        effect={"fade"}
-        grabCursor={false}
-        navigation={true}
-        slidesPerView={1}
-        modules={[EffectFade]}
-      >
-        {contextSlider.map((itemSlide, index) => (
-          <SwiperSlide key={itemSlide.id} className="swiper-slide-gallery">
-            <div
-              style={{
-                background: `url(${itemSlide.bgImage}) center/cover no-repeat `,
-                height: "100%",
-              }}
-            > 
-              <div className="container mx-auto container-main">
+    <div style={{
+                background: `url(${src}) center/cover no-repeat `,
+                height: "100%",}} > 
+              <div className="container-main">
                 <div className="flex flex-col tablet:flex-row tablet:gap-x-5 ">
                   <div className="tablet:flex desktop:flex-1 tablet:flex-col tablet:gap-y-10 desktop:gap-y-5 tablet:w-3/5 desktop:w-2/5">
                     <h2 className="mainTitle">
@@ -95,8 +20,8 @@ export default function Slider() {
                    
                      {/* w-[218px] h-[213px] tablet:w-[463px] tablet:h-[370px] desktop:w-[608px] desktop:h-[434px]"> */}
                       <Image
-                        src={itemSlide.slideImage}
-                        alt={itemSlide.title}
+                        src={srcImg}
+                        alt={title}
                         width={608}
                         height={434}
                         sizes="100vw"
@@ -107,7 +32,7 @@ export default function Slider() {
                         }}
                       />
                     <p className="tablet:hidden text-right mb-6 mt-1 text-xs not-italic font-extralight leading-6 tracking-[2.4px] laptop:mb-[34px]">
-                      {itemSlide.subTitle}
+                      {subTitle}
                     </p>
                   </div>
 
@@ -117,14 +42,14 @@ export default function Slider() {
                         0{index + 1}/<span className="text-secondary">05</span>
                       </p>
                       <ul className="flex flex-col gap-y-4 desktop:gap-y-6 ">
-                        {"ATVs Traveling" === itemSlide.title ? (
+                        {"ATVs Traveling" === title ? (
                           <li className="cursor-pointer font-medium flex flex-row items-center gap-x-2 desktop:relative">
                             <span className="block bg-primary rotate-45 w-[6px] h-[6px]" />
                             <span className="slideText desktop:w-[227px] ">
                               ATVs Traveling
                             </span>
                             <span className="desktop:absolute desktop:top-0 desktop:left-[304px] desktop:w-[200px] hidden desktop:block text-xs not-italic font-extralight leading-6 tracking-[2.4px]">
-                              {itemSlide.subTitle}
+                              {subTitle}
                             </span>
                           </li>
                         ) : (
@@ -136,14 +61,14 @@ export default function Slider() {
                           </li>
                         )}
 
-                        {"Rock climbing" === itemSlide.title ? (
+                        {"Rock climbing" === title ? (
                           <li className="cursor-pointer font-medium flex flex-row items-center gap-x-2 desktop:relative">
                             <span className="block bg-primary rotate-45 w-[6px] h-[6px]" />
                             <span className="slideText desktop:w-[227px] ">
                               Rock climbing
                             </span>
                             <span className="desktop:absolute desktop:top-0 desktop:left-[304px] desktop:w-[200px] hidden desktop:block text-xs not-italic font-extralight leading-6 tracking-[2.4px]">
-                              {itemSlide.subTitle}
+                              {subTitle}
                             </span>
                           </li>
                         ) : (
@@ -155,14 +80,14 @@ export default function Slider() {
                           </li>
                         )}
 
-                        {"Hot air ballooning" === itemSlide.title ? (
+                        {"Hot air ballooning" === title ? (
                           <li className="cursor-pointer font-medium flex flex-row items-center gap-x-2 desktop:relative">
                             <span className="block bg-primary rotate-45 w-[6px] h-[6px]" />
                             <span className="slideText desktop:w-[227px]">
                               Hot air ballooning
                             </span>
                             <span className="desktop:absolute desktop:top-0 desktop:left-[304px] desktop:w-[200px] hidden desktop:block text-xs not-italic font-extralight leading-6 tracking-[2.4px]">
-                              {itemSlide.subTitle}
+                              {subTitle}
                             </span>
                           </li>
                         ) : (
@@ -174,14 +99,14 @@ export default function Slider() {
                           </li>
                         )}
 
-                        {"Skydiving" === itemSlide.title ? (
+                        {"Skydiving" === title ? (
                           <li className="cursor-pointer font-medium flex flex-row items-center gap-x-2 desktop:relative">
                             <span className="block bg-primary rotate-45 w-[6px] h-[6px]" />
                             <span className="slideText desktop:w-[227px]">
                               Skydiving
                             </span>
                             <span className="desktop:absolute desktop:top-0 desktop:left-[304px] desktop:w-[200px] hidden desktop:block text-xs not-italic font-extralight leading-6 tracking-[2.4px]">
-                              {itemSlide.subTitle}
+                              {subTitle}
                             </span>
                           </li>
                         ) : (
@@ -193,14 +118,14 @@ export default function Slider() {
                           </li>
                         )}
 
-                        {"Rafting" === itemSlide.title ? (
+                        {"Rafting" === title ? (
                           <li className="cursor-pointer font-medium flex flex-row items-center gap-x-2 desktop:relative">
                             <span className="block bg-primary rotate-45 w-[6px] h-[6px]" />
                             <span className="slideText desktop:w-[220px]">
                               Rafting
                             </span>
                             <span className="desktop:absolute desktop:top-0 desktop:left-[304px] desktop:w-[200px] hidden desktop:block text-xs not-italic font-extralight leading-6 tracking-[2.4px]">
-                              {itemSlide.subTitle}
+                              {subTitle}
                             </span>
                           </li>
                         ) : (
@@ -216,22 +141,15 @@ export default function Slider() {
 
                     <div className="desktop:flex desktop:flex-col desktop:self-end">
                       <p className="hidden  laptop:block text-xs not-italic font-extralight leading-6 tracking-[2.4px] laptop:mb-[34px]">
-                        {itemSlide.subTitle}
+                        {subTitle}
                       </p>
                       <p className="text tablet:text-[13px] tablet:w-[221px] desktop:w-[293px]">
-                        {itemSlide.description}
+                        {description}
                       </p>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </SwiperSlide>
-        ))}
-    </Swiper>
-  );
+  )
 }
-
-  
-
- 

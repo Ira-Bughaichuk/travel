@@ -1,18 +1,10 @@
+import { navLinks } from "@/utils/Data/navLinks";
+import { IButtonNavProps } from "@/utils/types";
 import { Link } from "react-scroll";
 
-type INavProps = {
-  open: boolean;
-  handlerToggle: ()=> void;
-};
 
-export default function Nav({ open, handlerToggle }: INavProps) {
-  const navLinks = [
-    { label: "About", href: "/about" },
-    { label: "Services", href: "/services" },
-    { label: "Career", href: "/career" },
-    { label: "Gallery", href: "/gallery" },
-    { label: "Contacts", href: "/contacts" },
-  ];
+
+export default function Nav({ open, handlerToggle }: IButtonNavProps) {
   return (
     <nav
       className={`font-Inter tablet:flex  maxMobile:justify-center maxMobile:fixed  maxMobile:z-50 maxMobile:w-full maxMobile:pt-[20px] maxMobile:top-0 maxMobile:bottom-0  maxMobile:overflow-y-auto 

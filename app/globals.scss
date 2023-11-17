@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;700&family=Karantina&display=swap');
+//@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;700&family=Karantina&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -7,6 +7,12 @@
 
 .container-main{
   @apply text-primary pt-[56px] pb-[53px] px-[20px] tablet:pt-[73px] tablet:pb-[64px] tablet:px-[32px]  desktop:pt-[106px] desktop:pb-[104px] desktop:px-[104px]       
+ 
+}
+.section{
+  @apply mx-auto max-w-screen-xs
+  tablet:max-w-screen-tablet tablet:w-[768px]
+  desktop:max-w-screen-desktop desktop:w-[1280px] 
 }
 .mainTitle{
   @apply text-primary text-[40px] not-italic font-thin leading-[56px] tracking-[-1.6px] uppercase 
@@ -68,6 +74,64 @@ input.checked::before {
   top: -17px;
 }
 
+
+.hero-btn {
+  &::before {
+      content: '';
+
+      width: 42px;
+      height: 53px;
+
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      background-image: url('../public/assets/icons/mobL.svg');
+      opacity: 1;
+
+      @media screen and (min-width: 768px) {
+          width: 35px;
+          height: 50px;
+
+          background-image: url('../public/assets/icons/tabletL.svg');
+      }
+
+      @media screen and (min-width: 1280px) {
+          width: 44px;
+          height: 71px;
+
+          background-image: url('../public/assets/icons/deskL.svg');
+      }
+  }
+
+  &::after {
+      content: '';
+
+      width: 42px;
+      height: 53px;
+
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      background-image: url('../public/assets/icons/mobR.svg');
+      opacity: 1;
+
+      @media screen and (min-width: 768px) {
+          width: 35px;
+          height: 50px;
+
+          background-image: url('../public/assets/icons/tabletR.svg');
+      }
+
+      @media screen and (min-width: 1280px) {
+          width: 44px;
+          height: 71px;
+
+          background-image: url('../public/assets/icons/deskR.svg');
+      }
+  }
+}
 
 
 

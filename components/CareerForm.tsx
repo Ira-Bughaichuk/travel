@@ -4,15 +4,9 @@ import { useState } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import Close from "/public/assets/icons/close.svg";
 import toast  from 'react-hot-toast';
+import { ConfigFormCareer } from "@/utils/types";
 
-type ConfigFormCareer = {
-  fullName: string;
-  email: string;
-  position: string;
-  phone: string;
-  messages: string;
-  isAgree: boolean;
-};
+
 const defaultStateCareer: ConfigFormCareer = {
   fullName: "",
   email: "",
@@ -21,7 +15,7 @@ const defaultStateCareer: ConfigFormCareer = {
   messages: "",
   isAgree: false,
 };
-export default function CareerForm() {
+export const CareerForm: React.FC = () => {
   const [isChecked, setIsChecked] = useState(defaultStateCareer.isAgree);
   const {
     register,
@@ -31,7 +25,7 @@ export default function CareerForm() {
   } = useForm<ConfigFormCareer>({ mode: "onBlur" });
 
   const onSubmit: SubmitHandler<ConfigFormCareer> = (data) => {
-    alert(
+    toast(
       `Full Name:${data.fullName},
          Email:${data.email},
          Phone:${data.phone},
@@ -49,7 +43,7 @@ export default function CareerForm() {
     <>
       <form action="#" onSubmit={handleSubmit(onSubmit)} className="w-full">
         <div className="text-primary flex flex-col gap-y-4 tablet:flex-row tablet:gap-x-5 desktop:gap-x-6 ">
-          <div className="flex flex-col gap-y-4 desktop:gap-y-[26px] desktop:w-1/2">
+          <div className="flex flex-col gap-y-4 desktop:gap-y-[26px] desktop:w-[290px]">
             <div className="flex flex-col relative">
               <label className="label" htmlFor="career-name">Full name</label>
               <input
@@ -189,7 +183,7 @@ export default function CareerForm() {
             </div>
           </div>
 
-          <div className="w-full">
+          <div className="w-full desktop:w-[292px]">
             <div className="hidden tablet:flex tablet:flex-col w-full">
               <label className="label" htmlFor="career-tabl-messages">
                 Message

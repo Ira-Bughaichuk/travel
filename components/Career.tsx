@@ -1,5 +1,6 @@
-import React from "react";
-import CareerForm from "./CareerForm";
+
+import { CareerForm } from "./CareerForm";
+import { CareerInfo } from "./CareerInfo";
 
 
 
@@ -7,13 +8,13 @@ export default function Career() {
   return (
     <>
       <section id="/career" className="bg-Career bg-cover bg-no-repeat bg-center">
-        <div className="container mx-auto container-main">
+        <div className="container-main">
           <div>
             <div className="mb-6 tablet:mb-3 desktop:mb-6 tablet:flex tablet:flex-row tablet:justify-between tablet:items-center">
               <h2 className="mainTitle">
                 <span className="font-medium">Choose</span> US
               </h2>
-              <p className="hidden tablet:block w-[179px] tablet:w-[221px] desktop:w-[216px] text tablet:text-[13px]">
+              <p className="hidden tablet:block w-[179px] tablet:w-[221px] desktop:w-[293px] text tablet:text-[13px]">
                 Your chance to join our passionate team in Carpathian tourism.
                 Seeking talented professionals to share our common mission.
               </p>
@@ -33,44 +34,7 @@ export default function Career() {
             </p>
 
             <div className="w-full flex flex-col tablet:flex-row tablet:gap-x-5 desktop:gap-x-6">
-              <ul className=" flex flex-col gap-y-4 tablet:gap-y-6">
-                <li className="w-[171px] tablet:w-[221px] desktop:w-[570px] text-right flex flex-col gap-y-2 desktop:flex-row desktop:justify-end desktop:gap-x-6">
-                  <p className="text-sm not-italic leading-5 font-normal tablet:text-base desktop:text-lg desktop:leading-6">
-                    Professional development
-                  </p>
-                  <p className="desktop:w-[285px] text-xs not-italic leading-5 font-extralight desktop:leading-6">
-                    We offer growth opportunities and a creative environment to
-                    nurture your talents.
-                  </p>
-                </li>
-                <li className="w-[171px] tablet:w-[221px] desktop:w-[570px] text-right flex flex-col gap-y-2 desktop:flex-row desktop:justify-end desktop:gap-x-6">
-                  <p className="text-sm not-italic leading-5 font-normal tablet:text-base desktop:text-lg desktop:leading-6">
-                    Teamwork
-                  </p>
-                  <p className="desktop:w-[285px] text-xs not-italic leading-5 font-extralight desktop:leading-6">
-                    Join our close-knit family, where support and inspiration
-                    abound.
-                  </p>
-                </li>
-                <li className="w-[171px] tablet:w-[221px] desktop:w-[570px] text-right flex flex-col gap-y-2 desktop:flex-row desktop:justify-end desktop:gap-x-6">
-                  <p className="text-sm not-italic leading-5 font-normal tablet:text-base desktop:text-lg desktop:leading-6">
-                    Stimulating work environment
-                  </p>
-                  <p className="desktop:w-[285px] text-xs not-italic leading-5 font-extralight desktop:leading-6">
-                    Flexibility and remote options for a comfortable experience.
-                  </p>
-                </li>
-                <li className="w-[171px] tablet:w-[221px] desktop:w-[570px] text-right flex flex-col gap-y-2 desktop:flex-row desktop:justify-end desktop:gap-x-6">
-                  <p className="text-sm not-italic leading-5 font-normal tablet:text-base desktop:text-lg desktop:leading-6">
-                    Exciting challenges
-                  </p>
-                  <p className="desktop:w-[285px] text-xs not-italic leading-5 font-extralight desktop:leading-6">
-                    Unleash your potential through unforgettable projects
-                    showcasing Carpathian beauty.
-                  </p>
-                </li>
-              </ul>
-
+              <CareerInfo />
               {/* tablet */}
               <div className="w-full hidden tablet:flex tablet:flex-col tablet:gap-y-8 desktop:gap-y-[0] desktop:relative">
                 <div className="w-full">

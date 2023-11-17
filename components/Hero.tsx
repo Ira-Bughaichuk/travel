@@ -1,6 +1,7 @@
 "use client";
 
 import { Link } from "react-scroll";
+import { ButtonHero } from "./ButtonHero";
 
 export default function Hero() {
   return (
@@ -43,16 +44,7 @@ export default function Hero() {
                 the Carpathians. Enjoy stunning views, exciting expeditions, and
                 the best service!
               </p>
-              <Link
-                to="contacts"
-                spy={true}
-                smooth={true}
-                offset={100}
-                duration={500}
-                className="block text-center w-full border border-dashed  border-primary cursor-pointer bg-bgBtn py-[10px]  hover:bg-secondary duration-500 text-lg not-italic font-bold leading-[48px] tablet:leading-normal tablet:py-[14px] desktop:text-[32px] desktop:py-[16px] uppercase"
-              >
-                JOIN NOW
-              </Link>
+              <ButtonHero />
             </div>
           </div>
         </div>
