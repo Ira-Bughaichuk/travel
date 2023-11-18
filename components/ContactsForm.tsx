@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useForm, SubmitHandler } from "react-hook-form";
+import useFormPersist from 'react-hook-form-persist';
 import toast from "react-hot-toast";
 
 import { ConfigFormContacts } from "@/utils/types";
@@ -19,8 +20,13 @@ export const ContactsForm: React.FC = () => {
     register,
     handleSubmit,
     formState: { errors },
+    watch, 
+    setValue,
     reset,
   } = useForm<ConfigFormContacts>({ mode: "onBlur" });
+
+  useFormPersist('contactsForm', {watch, setValue});
+
   const onSubmit: SubmitHandler<ConfigFormContacts> = (data) => {
     toast(`
         Full Name:${data.fullName},

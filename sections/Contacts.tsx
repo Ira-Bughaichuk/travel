@@ -1,6 +1,7 @@
+import { ContactsForm } from "../components/ContactsForm";
+import { ContactsInfo } from "../components/ContactsInfo";
 
-import { ContactsInfo } from "./ContactsInfo";
-import { ContactsForm } from './ContactsForm';
+
 
 
 export default function Contacts() {

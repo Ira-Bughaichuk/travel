@@ -1,4 +1,7 @@
-export const gallery = [
+import { GalleryItems } from "../types";
+
+
+export const gallery:GalleryItems[] = [
     {
       image: "/assets/images/gallery-slide1.jpg",
       alt: "slide1",

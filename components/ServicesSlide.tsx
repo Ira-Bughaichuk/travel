@@ -1,8 +1,9 @@
 import { ServicesSlideProps } from "@/utils/types";
 import Image from "next/image";
 
+
 export const ServicesSlide: React.FC<ServicesSlideProps> = ({
-  src,srcImg, index, subTitle, title, description, handleSlideClick
+ src,srcImg, index, subTitle, title, description, handleSlideClick
   }) => {
   return (
     <div style={{

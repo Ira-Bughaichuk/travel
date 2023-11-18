@@ -1,5 +1,5 @@
 "use client";
-import Image from "next/image";
+
 import { useRef } from "react";
 import { Swiper, SwiperSlide, SwiperRef } from "swiper/react";
 import { EffectFade } from "swiper/modules";
@@ -7,7 +7,7 @@ import "swiper/css";
 import "swiper/css/effect-fade";
 import "./slider.css";
 
-import { contextSlider } from "@/utils/Data/ServicesData";
+import { servicesSlider } from "@/utils/Data/ServicesData";
 import { ServicesSlide } from "./ServicesSlide";
 
 export default function ServicesSwiper() {
@@ -29,7 +29,7 @@ export default function ServicesSwiper() {
         slidesPerView={1}
         modules={[EffectFade]}
       >
-        {contextSlider.map((itemSlide, index) => (
+        {servicesSlider.map((itemSlide, index) => (
           <SwiperSlide key={itemSlide.id} className="swiper-slide-gallery">
             <ServicesSlide handleSlideClick={handleSlideClick} src={itemSlide.bgImage} srcImg={itemSlide.slideImage} index={index} subTitle={itemSlide.subTitle} title={itemSlide.title} description={itemSlide.description}/>
           </SwiperSlide>

@@ -1,7 +1,5 @@
-"use client";
 
-import { Link } from "react-scroll";
-import { ButtonHero } from "./ButtonHero";
+import { ButtonHero } from "../components/ButtonHero";
 
 export default function Hero() {
   return (

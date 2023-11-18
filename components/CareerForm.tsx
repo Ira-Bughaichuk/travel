@@ -2,6 +2,8 @@
 import Image from "next/image";
 import { useState } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
+import useFormPersist from 'react-hook-form-persist';
+
 import Close from "/public/assets/icons/close.svg";
 import toast  from 'react-hot-toast';
 import { ConfigFormCareer } from "@/utils/types";
@@ -21,8 +23,12 @@ export const CareerForm: React.FC = () => {
     register,
     handleSubmit,
     formState: { errors },
+    watch,
+    setValue,
     reset,
   } = useForm<ConfigFormCareer>({ mode: "onBlur" });
+
+  useFormPersist('careerForm', {watch, setValue});
 
   const onSubmit: SubmitHandler<ConfigFormCareer> = (data) => {
     toast(

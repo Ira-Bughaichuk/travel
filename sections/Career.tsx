@@ -1,6 +1,6 @@
+import { CareerForm } from "../components/CareerForm";
+import { CareerInfo } from "../components/CareerInfo";
 
-import { CareerForm } from "./CareerForm";
-import { CareerInfo } from "./CareerInfo";
 
 
 

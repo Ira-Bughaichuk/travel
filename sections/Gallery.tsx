@@ -6,14 +6,16 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, EffectCoverflow } from "swiper/modules";
 
 import { gallery } from '@/utils/Data/GalleryData';
-import {GalleryMobile} from './GalleryMobile';
-import {GallerySwiperSlide} from './GallerySwiperSlide';
-import { GallerySwiperNav } from "./GallerySwiperNav";
+
 
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/effect-coverflow";
 import "./gallery.css";
+import { GalleryMobile } from '../components/GalleryMobile';
+import { GallerySwiperNav } from '../components/GallerySwiperNav';
+import { GallerySwiperSlide } from '../components/GallerySwiperSlide';
+
 
 export default function Gallery() {
   const [swiperReady, setSwiperReady] = useState(false);

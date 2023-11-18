@@ -1,9 +1,11 @@
 'use client';
+
 import { useState } from "react";
 
-import Nav from "./Nav";
-import ButtonNav from './ButtonNav';
-import Logo from "./Logo";
+import ButtonNav from "../components/ButtonNav";
+import Logo from "../components/Logo";
+import Nav from "../components/Nav";
+
 
 export default function Header() {
   let [open,setOpen] = useState<boolean>(false);
