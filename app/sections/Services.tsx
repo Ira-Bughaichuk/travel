@@ -1,4 +1,4 @@
-import ServicesSwiper from "../components/ServicesSwiper";
+import ServicesSwiper from "../../components/ServicesSwiper";
 
 
 export default function Services() {

@@ -9,7 +9,7 @@ export const ServicesSlide: React.FC<ServicesSlideProps> = ({
     <div style={{
                 background: `url(${src}) center/cover no-repeat `,
                 height: "100%",}} > 
-              <div className="container-main">
+              <div className="section-main container-main">
                 <div className="flex flex-col tablet:flex-row tablet:gap-x-5 ">
                   <div className="tablet:flex desktop:flex-1 tablet:flex-col tablet:gap-y-10 desktop:gap-y-5 tablet:w-3/5 desktop:w-2/5">
                     <h2 className="mainTitle">

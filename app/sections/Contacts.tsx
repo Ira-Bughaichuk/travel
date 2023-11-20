@@ -1,5 +1,5 @@
-import { ContactsForm } from "../components/ContactsForm";
-import { ContactsInfo } from "../components/ContactsInfo";
+import { ContactsForm } from "../../components/ContactsForm";
+import { ContactsInfo } from "../../components/ContactsInfo";
 
 
 
@@ -7,7 +7,7 @@ import { ContactsInfo } from "../components/ContactsInfo";
 export default function Contacts() {
   return (
     <section id="/contacts" className="bg-Contacts bg-cover bg-no-repeat bg-center">
-      <div className="container-main">
+      <div className="section-main container-main">
         <h2 className="mainTitle mb-9 tablet:mb-10 desktop:mb-[71px]">
           Contact <span className="font-medium">US</span>
         </h2>

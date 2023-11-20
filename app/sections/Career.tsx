@@ -1,5 +1,5 @@
-import { CareerForm } from "../components/CareerForm";
-import { CareerInfo } from "../components/CareerInfo";
+import { CareerForm } from "../../components/CareerForm";
+import { CareerInfo } from "../../components/CareerInfo";
 
 
 
@@ -8,7 +8,7 @@ export default function Career() {
   return (
     <>
       <section id="/career" className="bg-Career bg-cover bg-no-repeat bg-center">
-        <div className="container-main">
+        <div className="container-main section-main">
           <div>
             <div className="mb-6 tablet:mb-3 desktop:mb-6 tablet:flex tablet:flex-row tablet:justify-between tablet:items-center">
               <h2 className="mainTitle">

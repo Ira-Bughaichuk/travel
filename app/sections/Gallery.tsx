@@ -12,9 +12,9 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/effect-coverflow";
 import "./gallery.css";
-import { GalleryMobile } from '../components/GalleryMobile';
-import { GallerySwiperNav } from '../components/GallerySwiperNav';
-import { GallerySwiperSlide } from '../components/GallerySwiperSlide';
+import { GalleryMobile } from '../../components/GalleryMobile';
+import { GallerySwiperNav } from '../../components/GallerySwiperNav';
+import { GallerySwiperSlide } from '../../components/GallerySwiperSlide';
 
 
 export default function Gallery() {
@@ -30,7 +30,7 @@ export default function Gallery() {
   }, [prevBtnRef, nextBtnRef]);
   return (
     <section id="/gallery" className="w-full  relative z-10 bg-Gallery bg-no-repeat bg-cover bg-center ">
-      <div className="container-main">
+      <div className="container-main section-main">
         <h2 className="mainTitle mb-6 tablet:mb-[65px] tablet:text-center desktop:text-left desktop:mb-[15px]">
           Our<span className="font-medium"> gallery</span>
         </h2>

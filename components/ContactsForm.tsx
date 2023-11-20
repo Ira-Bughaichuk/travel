@@ -24,9 +24,8 @@ export const ContactsForm: React.FC = () => {
     setValue,
     reset,
   } = useForm<ConfigFormContacts>({ mode: "onBlur" });
-
   useFormPersist('contactsForm', {watch, setValue});
-
+ 
   const onSubmit: SubmitHandler<ConfigFormContacts> = (data) => {
     toast(`
         Full Name:${data.fullName},
@@ -34,6 +33,7 @@ export const ContactsForm: React.FC = () => {
         Message:${data.message || ""}`);
     reset();
   };
+
   return (
     <form
       action="#"

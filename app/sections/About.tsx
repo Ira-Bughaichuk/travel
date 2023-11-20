@@ -3,7 +3,7 @@
 export default function About() {
   return (
     <section id="/about" className="bg-About bg-cover bg-no-repeat bg-left desktop:bg-center">
-      <div className="container mx-auto container-main">
+      <div className="section-main container-main">
         <div className="flex flex-col laptop:justify-between tablet:flex-row tablet:gap-x-[76px] desktop:gap-x-6">
           <div className="laptop:flex laptop:flex-col laptop:justify-between">
             <h2 className="mainTitle mb-2 block">
