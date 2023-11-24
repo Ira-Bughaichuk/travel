@@ -17,7 +17,7 @@ body {
 }
 
 .section-main{
-  @apply mx-auto max-w-screen-xs
+  @apply w-full mx-auto max-w-screen-xs
   tablet:max-w-screen-tablet tablet:w-[768px]
   desktop:max-w-screen-desktop desktop:w-[1280px] 
    text-primary pt-[56px] pb-[53px] px-[20px] tablet:pt-[73px] tablet:pb-[64px] tablet:px-[32px] desktop:pt-[106px] desktop:pb-[104px] desktop:px-[104px]       
