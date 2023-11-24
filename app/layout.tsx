@@ -8,32 +8,32 @@ import Header from "@/app/sections/Header";
 
 const inter = Inter({ subsets: ['latin'] });
 
-export const metadata: Metadata = {
-  title: 'CarpTravel',
-  description: "The most beutiful places of rest",
-  icons: [
-    {
-      url: 'icons/favicon-dark.svg',
-      media: '(prefers-color-scheme: dark)',
-      rel: 'icon',
-      type: 'image/svg',
-    },
-    {
-      url: '/icons/favicon-light.svg',
-      media: '(prefers-color-scheme: light)',
-      rel: 'icon',
-      type: 'image/svg',
-    },
-  ],
-  openGraph: {
-    type: 'website',
-    url: 'http://localhost:3000',
-    title: 'CarpTravel',
-    description: 'The most beutiful places of rest',
-    siteName: 'CarpTravel',
-    images: [{ url: '/ogp/Logo.jpg' }, { url: '/ogp/Logo.png' }],
-  },
-}
+// export const metadata: Metadata = {
+//   title: 'CarpTravel',
+//   description: "The most beutiful places of rest",
+//   icons: [
+//     {
+//       url: 'icons/favicon-dark.svg',
+//       media: '(prefers-color-scheme: dark)',
+//       rel: 'icon',
+//       type: 'image/svg',
+//     },
+//     {
+//       url: '/icons/favicon-light.svg',
+//       media: '(prefers-color-scheme: light)',
+//       rel: 'icon',
+//       type: 'image/svg',
+//     },
+//   ],
+//   openGraph: {
+//     type: 'website',
+//     url: 'http://localhost:3000',
+//     title: 'CarpTravel',
+//     description: 'The most beutiful places of rest',
+//     siteName: 'CarpTravel',
+//     images: [{ url: '/ogp/Logo.jpg' }, { url: '/ogp/Logo.png' }],
+//   },
+// }
 
 export default function RootLayout({
   children,

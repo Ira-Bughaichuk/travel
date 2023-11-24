@@ -4,8 +4,9 @@ import { ButtonHero } from "../../components/ButtonHero";
 export default function Hero() {
   return (
     <section className="h-full bg-Hero bg-cover bg-center">
-      {/* <div className=""> */}
-        <div className="flex gap-y-6 flex-col tablet:flex-row tablet:justify-between font-Inter  text-primary px-5 tablet:px-[32px] desktop:px-[104px] pt-[105px] pb-[56px] tablet:pt-[122px] tablet:pb-[67px] desktop:pt-[130px] desktop:pb-[110px]">
+        <div className="mx-auto max-w-screen-xs
+            tablet:max-w-screen-tablet tablet:w-[768px]
+            desktop:max-w-screen-desktop desktop:w-[1280px]  w-full flex gap-y-6 flex-col tablet:flex-row tablet:justify-between font-Inter  text-primary px-5 tablet:px-[32px] desktop:px-[104px] pt-[105px] pb-[56px] tablet:pt-[122px] tablet:pb-[67px] desktop:pt-[130px] desktop:pb-[110px]">
           {/* Mobile */}
           <div className="flex flex-col items-end tablet:hidden">
             <p className=" text-[37px] leading-normal font-thin tracking-[1.665px] not-italic uppercase ">
@@ -46,7 +47,6 @@ export default function Hero() {
             </div>
           </div>
         </div>
-      {/* </div> */}
     </section>
   );
 }

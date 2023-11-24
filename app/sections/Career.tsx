@@ -7,14 +7,14 @@ import { CareerInfo } from "../../components/CareerInfo";
 export default function Career() {
   return (
     <>
-      <section id="/career" className="bg-Career bg-cover bg-no-repeat bg-center">
-        <div className="container-main section-main">
+      <section id="/career" className="  bg-Career bg-cover bg-no-repeat bg-center">
+        <div className="section-main">
           <div>
             <div className="mb-6 tablet:mb-3 desktop:mb-6 tablet:flex tablet:flex-row tablet:justify-between tablet:items-center">
               <h2 className="mainTitle">
                 <span className="font-medium">Choose</span> US
               </h2>
-              <p className="hidden tablet:block w-[179px] tablet:w-[221px] desktop:w-[293px] text tablet:text-[13px]">
+              <p className="hidden tablet:block w-[179px] tablet:w-[221px] desktop:w-[234px] text tablet:text-[13px]">
                 Your chance to join our passionate team in Carpathian tourism.
                 Seeking talented professionals to share our common mission.
               </p>

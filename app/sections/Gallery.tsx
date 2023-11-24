@@ -29,8 +29,8 @@ export default function Gallery() {
     }
   }, [prevBtnRef, nextBtnRef]);
   return (
-    <section id="/gallery" className="w-full  relative z-10 bg-Gallery bg-no-repeat bg-cover bg-center ">
-      <div className="container-main section-main">
+    <section id="/gallery" className="relative z-10 bg-Gallery bg-no-repeat bg-cover bg-center ">
+      <div className="section-main">
         <h2 className="mainTitle mb-6 tablet:mb-[65px] tablet:text-center desktop:text-left desktop:mb-[15px]">
           Our<span className="font-medium"> gallery</span>
         </h2>
@@ -39,7 +39,7 @@ export default function Gallery() {
           <GalleryMobile />
 
           {/* tablet and desktop */}
-          <div className="hidden tablet:block">
+          <div className="hidden tablet:flex">
             <GallerySwiperNav
             swiperReady={swiperReady}
             prevBtnRef={prevBtnRef}

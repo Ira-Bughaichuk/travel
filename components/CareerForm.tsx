@@ -49,7 +49,7 @@ export const CareerForm: React.FC = () => {
     <>
       <form action="#" onSubmit={handleSubmit(onSubmit)} className="w-full">
         <div className="text-primary flex flex-col gap-y-4 tablet:flex-row tablet:gap-x-5 desktop:gap-x-6 ">
-          <div className="flex flex-col gap-y-4 desktop:gap-y-[26px] desktop:w-[290px]">
+          <div className="flex flex-col gap-y-4 desktop:gap-y-[26px] desktop:w-[220px]">
             <div className="flex flex-col relative">
               <label className="label" htmlFor="career-name">Full name</label>
               <input
@@ -188,8 +188,8 @@ export const CareerForm: React.FC = () => {
               </label>
             </div>
           </div>
-
-          <div className="w-full desktop:w-[292px]">
+          {/* desktop:w-[292px] */}
+          <div className="w-full">
             <div className="hidden tablet:flex tablet:flex-col w-full">
               <label className="label" htmlFor="career-tabl-messages">
                 Message

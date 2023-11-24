@@ -9,7 +9,7 @@ export const ServicesSlide: React.FC<ServicesSlideProps> = ({
     <div style={{
                 background: `url(${src}) center/cover no-repeat `,
                 height: "100%",}} > 
-              <div className="section-main container-main">
+              <div className="section-main">
                 <div className="flex flex-col tablet:flex-row tablet:gap-x-5 ">
                   <div className="tablet:flex desktop:flex-1 tablet:flex-col tablet:gap-y-10 desktop:gap-y-5 tablet:w-3/5 desktop:w-2/5">
                     <h2 className="mainTitle">
@@ -23,14 +23,19 @@ export const ServicesSlide: React.FC<ServicesSlideProps> = ({
                       <Image
                         src={srcImg}
                         alt={title}
-                        width={608}
-                        height={434}
-                        sizes="100vw"
-                        style={{
-                          objectFit: 'cover',
-                            width: '100%',
-                            height: 'auto',
-                        }}
+                        width={213}
+                        height={280}
+                        loading="lazy"
+                        sizes="(max-width: 767px) 280px, (max-width: 1279px) 463px, 607px"
+                         className="image-slider"
+                        // width={608}
+                        // height={434}
+                        // sizes="100vw"
+                        // style={{
+                        //   objectFit: 'cover',
+                        //     width: '100%',
+                        //      height: 'auto',
+                        // }}
                       />
                     <p className="tablet:hidden text-right mb-6 mt-1 text-xs not-italic font-extralight leading-6 tracking-[2.4px] laptop:mb-[34px]">
                       {subTitle}
