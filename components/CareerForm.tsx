@@ -172,7 +172,6 @@ export const CareerForm: React.FC = () => {
             <div className="hidden tablet:flex tablet:flex-row tablet:gap-x-2 desktop:align-items">
               <div className="checkbox-wrapper">
                 <input
-                  id="career-check"
                   autoComplete="check"
                   aria-label="Check agreement checkbox"
                   type="checkbox"
@@ -215,7 +214,6 @@ export const CareerForm: React.FC = () => {
             <div className="flex flex-row gap-x-2 mb:4 tablet:hidden">
               <div className="checkbox-wrapper">
                 <input
-                  id="career-tabl-check"
                   autoComplete="check"
                   aria-label="Check agreement checkbox"
                   type="checkbox"
