@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link"
-import LogoIcon from "@/public/assets/icons/Logo.svg";
  //className="flex w-[59px] h-[21px] desktop:w-[61px] desktop:h-[22px]"
 export default function Logo() {
   return (
