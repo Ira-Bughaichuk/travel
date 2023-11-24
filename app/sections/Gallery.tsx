@@ -45,11 +45,11 @@ export default function Gallery() {
             prevBtnRef={prevBtnRef}
             nextBtnRef={nextBtnRef}
           />
-            <Swiper
+            <Swiper 
                effect={'coverflow'}
                loop
                loopPreventsSliding={false}
-               loopedslides={1}
+               loopedSlides={1}
                grabCursor={true}
                wrapperTag="ul"
                centeredSlides={true}
