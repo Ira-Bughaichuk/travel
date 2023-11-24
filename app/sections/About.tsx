@@ -50,7 +50,7 @@ export default function About() {
               </p>
             </div>
           </div>
-          <p className="text xs:w-[480px] tablet:w-[463px] desktop:w-[605px]">
+          <p className="text xs:w-[450px] tablet:w-[463px] desktop:w-[605px]">
             <span className="font-normal">We use methods</span> that are
             time-tested and proven. Our expert guides with in-depth knowledge of
             the Carpathian landscapes lead you safely through the mysteries of

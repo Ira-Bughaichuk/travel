@@ -7,7 +7,7 @@ export const GallerySwiperNav: React.FC<GalleryNavProps> = ({
         className={`hidden tablet:px-[38px] tablet:w-[704px] tablet:absolute tablet:bottom-[81px] tablet:z-20 
         tablet:flex tablet:justify-between tablet:text-[33px] tablet:font-thin tablet:leading-[33px]
           ${swiperReady ? 'opacity-100' : 'opacity-0'}
-           desktop:w-[1280px] desktop:bottom-[104px]
+            desktop:bottom-[104px]
           transition-opacity ease-in duration-300`}
       >
         <button
