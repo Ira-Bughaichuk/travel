@@ -16,6 +16,47 @@ import { GalleryMobile } from '../../components/GalleryMobile';
 import { GallerySwiperNav } from '../../components/GallerySwiperNav';
 import { GallerySwiperSlide } from '../../components/GallerySwiperSlide';
 
+const carouselSettings = {
+  
+
+  pagination: { clickable: true },
+  grabCursor: true,
+  loop: true,
+  slidesPerView: 2,
+  centeredSlides: true,
+  effect: "coverflow",
+  loopPreventsSliding: false,
+  loopedslides: 1,
+  wrapperTag: "ul",
+  speed: 1500,
+  coverflowEffect: {
+    rotate: 0,
+    stretch: 0,
+    depth: 200,
+    modifier: 1.32,
+    slideShadows: false,
+  },
+  breakpoints: {
+    768: {
+      coverflowEffect: {
+        rotate: 0,
+        stretch: 50,
+        depth: 0,
+        modifier: 1.32,
+        scale: 0.45,
+      },
+    },
+    1280: {
+      coverflowEffect: {
+        rotate: 0,
+        stretch: 120,
+        depth: 0,
+        modifier: 1.32,
+        scale: 0.65,
+      },
+    },
+  },
+};
 
 export default function Gallery() {
   const [swiperReady, setSwiperReady] = useState(false);
@@ -46,47 +87,12 @@ export default function Gallery() {
             nextBtnRef={nextBtnRef}
           />
             <Swiper 
-               effect={'coverflow'}
-               loop
-               loopPreventsSliding={false}
-               loopedSlides={1}
-               grabCursor={true}
-               wrapperTag="ul"
-               centeredSlides={true}
-               slidesPerView={2}
-               speed={1500}
-               coverflowEffect={{
-                 rotate: 0,
-                 stretch: 0,
-                 depth: 200,
-                 modifier: 1.32,
-                 slideShadows: false,
-               }}
-               breakpoints={{
-                 768: {
-                   coverflowEffect: {
-                     rotate: 0,
-                     stretch: 50,
-                     depth: 0,
-                     modifier: 1.32,
-                     scale: 0.45,
-                   },
-                 },
-                 1280: {
-                   coverflowEffect: {
-                     rotate: 0,
-                     stretch: 120,
-                     depth: 0,
-                     modifier: 1.32,
-                     scale: 0.65,
-                   },
-                 },
-               }}
-               navigation={{
-                 prevEl: prevBtnRef?.current,
-                 nextEl: nextBtnRef?.current,
-               }}
-               modules={[EffectCoverflow, Navigation]}
+               {...carouselSettings}  navigation={{
+                prevEl: prevBtnRef?.current,
+                nextEl: nextBtnRef?.current,
+              }}
+              modules={[EffectCoverflow, Navigation]}
+              
               className="h-[294px] desktop:h-[429px] flex justify-center gap-6 relative"
               
             >
