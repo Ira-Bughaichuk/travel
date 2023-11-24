@@ -10,7 +10,7 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'CarpTravel',
-  description: "The most beutiful places of rest",
+  description: "The most beautiful places of rest",
   icons: [
     {
       url: 'icons/favicon-dark.svg',
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     type: 'website',
     url: 'https://travel-6bdg1e2ow-ira-bughaichuks-projects.vercel.app/',
     title: 'CarpTravel',
-    description: 'The most beutiful places of rest',
+    description: 'The most beautiful places of rest',
     siteName: 'CarpTravel',
     images: [{ url: '/ogp/Logo.jpg' }, { url: '/ogp/Logo.png' }],
   },
