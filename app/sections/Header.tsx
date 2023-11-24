@@ -1,9 +1,10 @@
 'use client';
 
+import Logo from "@/components/Logo";
 import { useState } from "react";
 
 import ButtonNav from "../../components/ButtonNav";
-import Logo from "../../components/Logo";
+
 import Nav from "../../components/Nav";
 
 
