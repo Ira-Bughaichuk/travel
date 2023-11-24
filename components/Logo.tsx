@@ -5,7 +5,7 @@ export default function Logo() {
   return (
     <Link href="/" target='_blank' rel="noopener noreferrer nofollow" role="navigation" aria-label="Main" className="flex gap-[2px] flex-col w-[61px] [h-34px]">
        <Image
-         src='/assets/icons/Logo.svg'
+         src='@/assets/icons/Logo.svg'
          alt="CarpTravel logo"
          width={59}
          height={21}
