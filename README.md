@@ -59,17 +59,17 @@ Thank you for using the __CarpTravel Website!__
 
 
 ### Running the Project
-0. 1. To run the project, follow these steps:
+1. To run the project, follow these steps:
 
-0. 2. Clone the project repository to your local computer.
+2. Clone the project repository to your local computer.
 
-0. 3. Open a terminal and navigate to the project folder.
+3. Open a terminal and navigate to the project folder.
 
-` #Install project dependencies
+Install project dependencies
 npm install
 
-#Start the development server
-npm run dev `
+Start the development server
+npm run dev 
 
 The project will be accessible at [](http://localhost:3000).
 
