@@ -80,7 +80,7 @@ export default function Gallery() {
           <GalleryMobile />
 
           {/* tablet and desktop */}
-          <div className="hidden tablet:flex">
+          <div className="hidden tablet:flex desktop:relative desktop:justify-center">
             <GallerySwiperNav
             swiperReady={swiperReady}
             prevBtnRef={prevBtnRef}

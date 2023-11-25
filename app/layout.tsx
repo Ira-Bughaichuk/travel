@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     type: 'website',
-    url: 'https://travel-6bdg1e2ow-ira-bughaichuks-projects.vercel.app/',
+    url: 'https://travel-git-main-ira-bughaichuks-projects.vercel.app/',
     title: 'CarpTravel',
     description: 'The most beautiful places of rest',
     siteName: 'CarpTravel',
